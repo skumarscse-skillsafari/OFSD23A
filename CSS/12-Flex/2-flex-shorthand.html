@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Flex">
+    <title>Flex</title>
+    <style>
+        .parent {
+            border: 2px solid red;
+            /* min-height: 100vh; */
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+
+        .child {
+            border: 2px solid green;
+            padding: 50px;
+            /* flex-grow: 1; */
+
+        }
+
+        .child-1 {
+            background: coral;
+            /* flex-grow: 1; */
+        }
+
+        .child-2 {
+            width: 200px;
+            background: cornflowerblue;
+            /* flex-basis: 100px;
+            flex-shrink: 0; */
+            /* flex: 1 0 200px; */
+        }
+
+        .child-3 {
+            flex-basis: 300px;
+            background: crimson;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child child-1">One</div>
+        <div class="child child-2">Two</div>
+        <div class="child child-3">Three</div>
+    </div>
+</body>
+
+</html>

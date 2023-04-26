@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <title>HTML Text formatting tags</title>
+    <style>
+        /* 
+            FOnt-Family => Serif, San-Serif, Monospace, Cursive, Fantasy
+        */
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /* background: gray; */
+        }
+
+        h1,
+        h2 {
+            color: red;
+        }
+
+        .article-one {
+            color: blue;
+        }
+
+        .article-two {
+            color: green;
+        }
+
+        p {
+            color: green;
+            font-size: 20px;
+            line-height: 40px;
+            word-spacing: 20px;
+            letter-spacing: 5px;
+            text-align: justify;
+            text-decoration: underline;
+            color: blue;
+            text-indent: 50px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px red;
+            font-style: italic;
+            /* background: gray; */
+        }
+
+        p::first-letter {
+            font-size: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Text Formating tags
+        1. Bold - <b>..</b> / <strong>...</strong> Ex: <b>Hello</b>
+        2. Italic - <i>...</i> / <em>...</em>
+        3. Underline - <u>...</u>
+        4. Strike-through - <s>...</s>
+        5. Subscript - <sub>...</sub>
+        6. Superscript - <sup>...</sup>
+        7. Delete and Insert - <del>...</del> / <ins>...</ins>
+        8. Highlight - <mark>...</mark>
+        9. Small - <small>...</small>
+
+        1. Font-type
+        2. Font-color
+        3. Line spacing
+        4. Intent
+        5. Allignment
+        6. Font-style
+
+
+     -->
+    <h1><u>Today's News</u></h1>
+    <section id="headlines">
+        <h2><i><u>Headlines</u></i></h2>
+        <article>
+            <h2 class="article-one"><u>Article - 1</u></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere placeat ab assumenda. Mollitia illum
+                accusantium corrupti modi eligendi veniam ipsum aspernatur repellendus accusamus excepturi dolorum
+                eveniet earum pariatur facere libero neque, explicabo inventore placeat labore porro in similique ex!
+                Quasi doloremque ullam aspernatur ipsum temporibus, dolore corrupti beatae voluptates id ratione! Esse,
+                facilis doloribus maiores sunt debitis aliquam officiis repudiandae inventore vel iusto impedit dolore
+                at quasi, reprehenderit assumenda consequatur animi temporibus, eligendi odio eveniet ipsa totam
+                mollitia placeat. <br> Deleniti, accusantium tenetur officiis asperiores deserunt labore minima, ratione
+                ipsa
+                nesciunt accusamus voluptas odit reiciendis possimus atque qui sequi. Qui nesciunt molestias magnam ea
+                necessitatibus soluta labore ad ex maiores laudantium similique, possimus quidem omnis doloribus
+                quisquam aliquam consectetur tenetur a deserunt? Commodi tempora cum deserunt molestias consequuntur?
+                Laborum possimus id harum deserunt sed assumenda explicabo cupiditate. Accusantium aliquam placeat sit
+                sed ex dolore quisquam, dolor tempora qui deserunt doloremque dolorem odit neque magnam explicabo
+                reprehenderit? Ab animi maiores, suscipit pariatur nam unde quis. Temporibus fuga rem, tenetur natus
+                ducimus doloribus in beatae ratione? Vel ipsum odio ratione et reiciendis doloribus pariatur minus vero
+                placeat consectetur soluta amet doloremque neque voluptatem nisi error tempore laborum sapiente,
+                repellendus, distinctio eos, repudiandae voluptates <br><br><s>Consequuntur voluptatibus delectus
+                    corrupti
+                    culpa,
+                    debitis laborum quidem eligendi optio unde consectetur esse aperiam rem magni ducimus veniam
+                    assumenda
+                    dolorem sequi, minus sit, sint temporibus. Veniam, quod! Molestiae aliquid corrupti velit! Illo
+                    dolorem
+                    quo similique voluptate, quasi saepe neque? Quaerat nihil deleniti obcaecati fuga corporis totam
+                    pariatur in amet alias?</s></p>
+            <p><em>#End of Article - 1</em></p>
+        </article>
+        <article>
+            <h2 class="article-two">Article - 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corrupti praesentium nam sint minus aliquam
+                architecto natus iusto, laborum, aut minima, hic consequuntur voluptate eveniet enim fuga nemo. Dicta,
+                ad, repudiandae ex nam quas sit, laudantium nemo esse modi consequuntur quidem ipsa in magni doloremque
+                sunt. Nisi nesciunt sequi minus?</p>
+        </article>
+    </section>
+    <hr />
+    <section id="sports">
+        <h2><del>Sports</del><ins>Technology</ins></h2>
+        <article>
+            <h2 class="article-one">Article - 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati, quidem quos sapiente qui
+                laboriosam officiis perferendis. Unde recusandae ipsa sit voluptatum fugit cumque laborum quia.
+                Veritatis, nihil. Sapiente quos eos enim ex maxime saepe ad rerum? Ad dolorem, fuga quas et ducimus
+                mollitia cum, maxime assumenda voluptas rerum recusandae?</p>
+        </article>
+        <article>
+            <h2 class="article-two">Article - 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corrupti praesentium nam sint minus aliquam
+                architecto natus iusto, laborum, aut minima, hic consequuntur voluptate eveniet enim fuga nemo. Dicta,
+                ad, repudiandae ex nam quas sit, laudantium nemo esse modi consequuntur quidem ipsa in magni doloremque
+                sunt. Nisi nesciunt sequi minus?</p>
+        </article>
+    </section>
+    <hr>
+    <section id="entertainment">
+        <h2>Entertainment</h2>
+        <article>
+            <h2 class="article-one">Article - 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati, quidem quos sapiente qui
+                laboriosam officiis perferendis. Unde recusandae ipsa sit voluptatum fugit cumque laborum quia.
+                Veritatis, nihil. Sapiente quos eos enim ex maxime saepe ad rerum? Ad dolorem, fuga quas et ducimus
+                mollitia cum, maxime assumenda voluptas rerum recusandae?</p>
+        </article>
+        <article>
+            <h2 class="article-two">Article - 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corrupti praesentium nam sint minus aliquam
+                architecto natus iusto, laborum, aut minima, hic consequuntur voluptate eveniet enim fuga nemo. Dicta,
+                ad, repudiandae ex nam quas sit, laudantium nemo esse modi consequuntur quidem ipsa in magni doloremque
+                sunt. Nisi nesciunt sequi minus?</p>
+        </article>
+    </section>
+    <hr>
+    <p>Copyright <small>(C)</small> 2023. All rights reserved. <strong><i><u><mark>SkillSafari</mark></u></i></strong>
+    </p>
+    <hr>
+    <h2>SubScript</h2>
+    <p>H<sub>2</sub>O</p>
+    <hr>
+    <h2>SuperScript</h2>
+    <p>X<sup>2</sup> + Y<sup>2</sup> = 1</p>
+
+    <p>Lorem ipsum dolor sit amet <b>consectetur</b> adipisicing elit. Quisquam, error!</p>
+</body>
+
+</html>

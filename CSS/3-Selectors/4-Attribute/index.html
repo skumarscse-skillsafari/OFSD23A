@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS Selector - Attribute">
+    <title>CSS - Selector Attribute</title>
+    <style>
+        /* 
+            // Attribute Selector
+            // Syntax
+             [attributeName] {
+                property: propertyValue;
+            }
+
+            [attributeName="attributeValue"] {
+                property: propertyValue;
+            }
+
+            selector[attributeName] {
+                property: propertyValue;
+            }
+
+            selector[attributeName="attributeValue"] {
+                property: propertyValue;
+            }
+
+            ^ => starts with
+            * => contains
+            $ => ends with
+        */
+        /* h1[class="color-red"] {
+            text-decoration: underline;
+            color: darkviolet;
+            font-size: 36px;
+        } */
+
+        /* p[class^="c"] {
+            color: red;
+        } */
+
+        /* p[class*="e"] {
+            color: red;
+        } */
+
+        p[class$="n"] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Heading</h1>
+        <p class="color-red">This is paragraph</p>
+        <a href="#">Click</a>
+        <p class="color-green">Lorem ipsum dolor sit amet. <a href="#">Link Text</a>Lorem, ipsum dolor.</p>
+        <h1 class="color-red">Heading</h1>
+        <p>This is paragraph</p>
+        <a href="#">Click</a>
+        <p class="color-blue">Lorem ipsum dolor sit amet. <a href="#">Link Text</a>Lorem, ipsum dolor.</p>
+        <hr>
+        <p class="color-brown">This is paragraph</p>
+        <a href="#">Click</a>
+        <p class="color-coral">Lorem ipsum dolor sit amet. <a href="#">Link Text</a>Lorem, ipsum dolor.</p>
+        <h1>Heading</h1>
+        <p id="color-crimson">This is paragraph</p>
+        <a href="#">Click</a>
+        <p id="color-yellow">Lorem ipsum dolor sit amet. <a href="#">Link Text</a>Lorem, ipsum dolor.</p>
+    </div>
+</body>
+
+</html>

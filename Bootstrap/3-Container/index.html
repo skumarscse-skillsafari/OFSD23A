@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Bootstrap 5 - Container">
+    <title>Bootstrap 5 - Container</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            color: darkblue;
+        }
+
+        .box {
+            border: 2px solid red;
+            height: 280px;
+            background: green;
+        }
+
+
+        i {
+            border: 1px solid red;
+            font-size: 30px;
+            padding: 10px;
+            background-image: linear-gradient(68.3deg,
+                    rgba(245, 177, 97, 1) 0.4%,
+                    rgba(236, 54, 110, 1) 100.2%);
+            color: white;
+            border-radius: 30px;
+            transform: translateY(-30px) translateX(20px);
+        }
+
+        .h {
+            font-size: 16px;
+            font-weight: bolder;
+            margin-bottom: 8px;
+        }
+
+        .c {
+            font-size: 14px;
+            margin-bottom: 0px;
+        }
+
+        .col {
+            background: white;
+            border-radius: 15px;
+            /* margin-bottom: 40px; */
+
+            /* padding-left: 10px;
+  margin-left: 10px;
+  margin-right: 10px; */
+        }
+
+        .checkout {
+            background-image: linear-gradient(68.3deg,
+                    rgba(245, 177, 97, 1) 0.4%,
+                    rgba(236, 54, 110, 1) 100.2%);
+            color: white;
+            font-size: 30px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Breakpoints (width)
+        1. sm => >= 576px
+        2. md => >= 768px
+        3. lg => >= 992px
+        4. xl => >= 1200px
+        5. xxl => >= 1400px
+
+        Container
+        1. .container => fit max-width in each breakpoints
+        2. .container-fluid => apply width: 100% in all the breakpoints
+        3. .container-{breakpoints} => apply width: 100% to all the below breakpoints 
+
+        Row and Column
+        Multi-column
+        .col and .row
+
+        Margin
+        value => 0, 1, 2, 3, 4, 5
+        .m-{value} => top, right, bottom, left
+        .mt-{value} => margin-top
+        .mb-{value} => margin-bottom
+        .ms-{value} => margin-left
+        .me-{value} => margin-right
+        .mx-{value} => margin-left and margin-right
+        .my-{value} => margin-top and margin-bottom
+
+        Padding
+        value => 0, 1, 2, 3, 4, 5
+        .p-{value} => top, right, bottom, left
+        .pt-{value} => padding-top
+        .pb-{value} => padding-bottom
+        .ps-{value} => padding-left
+        .pe-{value} => padding-right
+        .px-{value} => padding-left and padding-right
+        .py-{value} => padding-top and padding-bottom
+
+
+        Grid
+        .row and .col
+     -->
+    <!-- <div class="container-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab unde a
+        reprehenderit
+        voluptates
+        dolorum fuga
+        inventore nihil labore in rem dolores ut cumque, assumenda sed consequatur excepturi ipsum iste atque repellat
+        qui, blanditiis praesentium dolorem ducimus. Autem possimus totam mollitia magnam recusandae eum dolores, labore
+        sapiente commodi, suscipit quod minima libero, explicabo incidunt eveniet asperiores tenetur rem iste debitis
+        ipsa nihil. Earum delectus mollitia voluptate, saepe natus veniam quos officiis dicta aliquid, minus nostrum
+        voluptatum aliquam distinctio vero ad sed itaque soluta quaerat sint, exercitationem libero? Maxime atque, magni
+        maiores suscipit commodi modi delectus, ea consequuntur impedit totam, voluptate veniam! Sit fugit dolorem ex
+        maiores odio, ad doloremque soluta nemo eligendi obcaecati, magni iusto debitis beatae nesciunt? Accusantium
+        aut, delectus earum sunt vel cumque, maiores inventore ut rerum ipsam fuga mollitia, vero necessitatibus
+        quibusdam saepe quis commodi sit eveniet repudiandae. Aut veniam repellat architecto praesentium nam ratione
+        expedita modi magni, magnam voluptatum quasi cum consectetur. Cum temporibus blanditiis error vel earum culpa,
+        delectus similique dolor eligendi alias facilis expedita. Eos quod nobis placeat veniam repellendus
+        reprehenderit temporibus, esse iste excepturi commodi laboriosam? Similique, explicabo porro? Voluptas, dolore
+        culpa iste molestias dolores maiores incidunt, temporibus neque quos soluta rerum? Itaque odit quibusdam ipsam
+        cumque, tenetur blanditiis enim exercitationem id tempore repudiandae illum. Odit fugiat exercitationem qui
+        fugit voluptates quo fuga odio expedita! Magni earum ratione doloribus harum, eius fuga voluptatum architecto!
+        Officia fugiat aperiam, saepe illo vel rerum officiis. Dolorum cupiditate eligendi numquam obcaecati deserunt
+        laborum cum libero iusto amet porro!
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="row mb-3">
+            <div class="col">
+                <div class="box p-4">BOX</div>
+            </div>
+            <div class="col">
+                <div class="box p-4">BOX</div>
+            </div>
+            <div class="col">
+                <div class="box p-4">BOX</div>
+            </div>
+            <div class="col">
+                <div class="box p-4">BOX</div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <div class="box p-4">BOX</div>
+            </div>
+            <div class="col">
+                <div class="box p-4">BOX</div>
+            </div>
+            <div class="col">
+                <div class="box p-4">BOX</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="box p-4">BOX</div>
+            </div>
+            <div class="col">
+                <div class="box p-4">BOX</div>
+            </div>
+            <div class="col">
+                <div class="box p-4">BOX</div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container-fluid">
+        <div class="row gy-3 my-3">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="box p-4">
+                    <div>
+                        <p style="color: white">Checkout our most popular courses !</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="box p-4">
+                    <div>
+                        <i class="fa-solid fa-person-running"></i>
+                        <p class="h">Animation</p>
+
+                        <br />
+
+                        <p style="opacity: 0.5" class="c">
+                            Learn the latest animation techniques to create stunning motion
+                            design and captivate your audience
+                        </p>
+                        <br />
+                        <p style="color: #fd5c63">Get started</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="box p-4">
+                    <div>
+                        <i class="fa-solid fa-image"></i>
+                        <p class="h">Design</p>
+
+                        <br />
+
+                        <p style="opacity: 0.5" class="c">
+                            Create beautiful usable interfaces to help shape the future of how
+                            web looks
+                        </p>
+                        <br />
+                        <p style="color: #fd5c63">Get started</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="box p-4">
+                    <div>
+                        <i class="fa-solid fa-camera"></i>
+                        <p class="h">Photography</p>
+                        <br />
+                        <p style="opacity: 0.5" class="c">
+                            Explore critical fundamentals like lighting , compostion and focus
+                            to capture exceptional photos.
+                        </p>
+                        <br />
+
+                        <p style="color: #fd5c63">Get started</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="box p-4">
+                    <div>
+                        <i class="fa-solid fa-chess-board"></i>
+                        <p class="h">Crypto</p>
+
+                        <br />
+
+                        <p style="opacity: 0.5" class="c">
+                            All ypu need to know to get started investing in crypto . GO from
+                            beginner to advanced with this 54 hour course
+                        </p>
+                        <br />
+                        <p style="color: #fd5c63">Get started</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="box p-4">
+                    <div>
+                        <i class="fa-sharp fa-solid fa-bag-shopping"></i>
+                        <p class="h">Business</p>
+
+                        <br />
+
+                        <p style="opacity: 0.5" class="c">
+                            A step-by-step playbook to help you start , scale , and sustain
+                            your businees without outside investment.
+                        </p>
+                        <br />
+                        <p style="color: #fd5c63">Get started</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap 5 JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

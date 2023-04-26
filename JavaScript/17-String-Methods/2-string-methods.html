@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="String - Methods">
+    <title>String - Methods</title>
+</head>
+<body>
+    <h2>String - Methods</h2>
+
+    <script>
+        // String 
+        // Character
+        // Sub-string => Part of a string [single or group of characters]
+        // "Hello, World"
+        
+
+        // Searching for a substring
+        // 1. str.indexOf() and str.lastIndexOf()
+        // 2. str.includes(), str.startsWith(), str.endsWith() => returns Boolean
+
+        // str.indexOf(a, b)
+        // a => searchString
+        // b => search start position
+        // Syntax
+        // str.indexOf("substring", pos) => if substring found, returns index or position
+        //                             else, return "-1"
+
+        // let str = "Hello, World";
+        // console.log(str.indexOf("World")); 
+        // console.log(str.indexOf("World", 8)); 
+        // console.log(str.indexOf("e")); 
+        // console.log(str.indexOf("o")); 
+        // console.log(str.indexOf("o", 5));   
+        // let searchString = prompt("Enter substring");
+        // let pos = 0;
+        // while(true) {
+        //     let foundPos = str.indexOf(searchString, pos);
+        //     if (foundPos == -1) break;
+        //     console.log(`The search string: ${searchString} => Found in the position: ${foundPos}`)
+        //     pos = foundPos + 1;
+        // }
+
+        // str.lastIndexOf(a, b) => return last occurance index
+        // a => substring
+        // b => search start position
+        // console.log(str.lastIndexOf("o"));
+
+        // str.includes(a, b) => return "true" if substring exists else return "false"
+        // a => substring
+        // b => serach start index
+        // console.log(str.includes("ello"));
+        // console.log(str.includes(", "));
+        // console.log(str.includes("abc"));
+        // console.log(str.includes("o", 9));
+        // console.log(str.includes("o", 3));
+        // console.log(str.includes("h"));
+
+        // str.startsWith(searchString, position)
+        // console.log(str.startsWith("World"))
+        // console.log(str.startsWith("Hello"))
+        // console.log(str.startsWith("H", 1))
+
+        // str.endsWith(searchString, position)
+        // console.log(str.endsWith("World"))
+        // console.log(str.endsWith(", "))
+
+        // Extracting substring from string using position
+        // 1. str.slice()
+        // 2. str.substring()
+        // 3. str.substr()
+
+        // str.slice(a, b) => return "subtring" in the range from "a" position to "b-1" position
+        // a => start position
+        // b => end position
+        
+        // let str = "Hello, World";
+        // console.log(str.slice(0, 5)); // "Hello"
+        // console.log(str.slice(7)); // "World"
+        // console.log(str.slice(5, 7)); // ", "
+        // console.log(str.slice(2, 4)); // ", "
+        // console.log(str.slice(-5)); // "World"
+        // console.log(str.slice(7, 5)); 
+        // console.log(str.slice(-5, 13)); // "World"
+
+        // str.substring(a, b) => return "subtring" in the range from "a" position to "b-1" position
+        // a => start index
+        // b => end index
+        // Not support negative values
+        // console.log(str.substring(0, 5));
+        // console.log(str.substring(5, 0));
+
+        // str.substr(a, b) => return substring based on startIndex and length
+        // a => start index
+        // b => length
+        // console.log(str.substr(0, 10));
+        // console.log(str.substr(-5, 5));
+
+        // str.codePointAt(pos)
+        // String.fromCodePoint(code)
+
+        // let str = "Hello, World";
+        // console.log(str.codePointAt(0))
+        // for(let i = 0; i < str.length; i++) {
+        //     console.log(str.codePointAt(i));
+        // }
+
+        // String.fromCodePoint(code)
+        // console.log(String.fromCodePoint(72));
+
+
+
+
+
+    
+    </script>
+</body>
+</html>

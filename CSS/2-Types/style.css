@@ -1,0 +1,10 @@
+/* Universal Selector */
+* {
+  color: red;
+}
+
+/* Type Selector - TagName */
+p,
+h2 {
+  color: green;
+}

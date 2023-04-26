@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS Selector - ID Vs. Class">
+    <title>CSS Selector - ID Vs. Class</title>
+    <style>
+        /* #green,
+        .text {
+            color: green;
+            font: size 24px;
+            text-align: center;
+        }
+
+        .red {
+            color: red;
+        }
+
+        p#green {
+            text-shadow: 1px 1px 5px red;
+        } */
+
+        p#green.text {
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Heading</h1>
+    <p id="green" class="red text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, inventore.</p>
+    <h2>Sub-Heading</h2>
+    <p id="blue">Lorem ipsum dolor sit amet.</p>
+    <p class="green">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, libero
+        <span class="text">Lorem,
+            ipsum dolor.</span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic iusto possimus
+        perspiciatis, sint
+        delectus ipsam facere iure consectetur eaque facilis? Mollitia cum in similique, nemo corrupti nesciunt nihil
+        temporibus aut!
+    </p>
+    <div class="text">
+        <p id="green">Lorem ipsum dolor sit amet.</p>
+    </div> -->
+
+    <div>
+        <p id="green" class="text">Lorem ipsum dolor sit amet.</p>
+        <h2 id="green" class="text">Lorem ipsum dolor sit amet.</h2>
+    </div>
+
+    <div id="green">
+        <p class="text">Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+
+</html>

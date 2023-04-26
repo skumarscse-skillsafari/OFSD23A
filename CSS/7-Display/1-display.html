@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Display">
+    <title>Display Properties</title>
+    <style>
+        /* 
+        CSS - Display
+        1. block
+        2. inline
+        3. inline-block
+        4. none
+
+        5. opacity
+
+        Static - this is the default value, all elements are in order as they appear in the document.
+        Relative - the element is positioned relative to its normal position.
+        Absolute - the element is positioned absolutely to its first positioned parent.
+        Fixed - the element is positioned related to the browser window.
+        Sticky - the element is positioned based on the user’s scroll position.
+    */
+
+        .inline {
+            background: green;
+            display: inline;
+        }
+
+        .block {
+            background: red;
+            display: block;
+        }
+
+        .inline-block {
+            display: inline-block;
+            height: 250px;
+            width: 250px;
+        }
+
+        .none {
+            height: 20px;
+            background: coral;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        div {
+            height: 20px;
+            background: coral;
+            margin-bottom: 10px;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .opacity {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="inline">Heading</h1>
+    <span class="block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, distinctio?</span>
+    <h2 class="inline inline-block">Sub Heading</h2>
+    <div class="none"></div>
+    <div class="hidden"></div>
+    <div class="opacity"></div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, culpa.</p>
+</body>
+
+</html>

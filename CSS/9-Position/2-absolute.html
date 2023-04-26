@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Position - Absolute">
+    <title>CSS - Position - Absolute</title>
+    <style>
+        h1,
+        h2 {
+            border: 1px solid red;
+            position: relative;
+            left: 50px;
+        }
+
+        .container {
+            height: 200px;
+            background: green;
+            position: relative;
+        }
+
+        .container>p {
+            border: 1px solid blue;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        p {
+            border: 1px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Heading</h1>
+    <div class="container">
+        <h2>Sub-heading</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, natus.</p>
+    </div>
+    <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, in.</p> -->
+</body>
+
+</html>

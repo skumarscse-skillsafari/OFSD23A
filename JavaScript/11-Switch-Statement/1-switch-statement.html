@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Switch Statement">
+    <title>Switch Statement</title>
+</head>
+
+<body>
+    <h1>Switch Statement</h1>
+
+    <script>
+        // Switch Statement
+        // Alternative to multiple if conditions
+        // Syntax
+        /*
+            switch (x) {
+                case value-1: // x === value-1
+                    // statement
+                    break;
+                case value-2: // x === value-2
+                    // statement
+                    break;
+                case value-N: // x === value-N
+                    // statement
+                    break;
+                default:
+                    // statement
+            }
+        */
+        // let day = prompt("Enter any day (Sunday to Saturday)");
+        // switch (day.toLowerCase()) {
+        //     case "sunday": // day === "sunday"
+        //         console.log(`User entered: ${day}`);
+        //         break;
+        //     case "monday":
+        //         console.log(`User entered: ${day}`);
+        //         break;
+        //     case "tuesday":
+        //         console.log(`User entered: ${day}`);
+        //         break;
+        //     case "wednesday":
+        //         console.log(`User entered: ${day}`);
+        //         break;
+        //     case "thursday":
+        //         console.log(`User entered: ${day}`);
+        //         break;
+        //     case "friday":
+        //         console.log(`User entered: ${day}`);
+        //         break;
+        //     case "saturday":
+        //         console.log(`User entered: ${day}`);
+        //         break;
+
+        //     default:
+        //         console.log("Enter only the day between Sunday and Saturday");
+        // }
+
+        // Grouping of case
+        let day = prompt("Enter any day (Sunday to Saturday)");
+        switch (day.toLowerCase()) {
+            case "sunday": // day === "sunday"
+                console.log(`User entered: ${day}`);
+                break;
+            case "monday":
+                console.log(`User entered: ${day}`);
+                break;
+            case "tuesday":
+            case "wednesday":
+                console.log(`User entered: ${day}`);
+                console.log(`User entered: ${day}`);
+                break;
+            case "thursday":
+                console.log(`User entered: ${day}`);
+                break;
+            case "friday":
+                console.log(`User entered: ${day}`);
+                break;
+            case "saturday":
+                console.log(`User entered: ${day}`);
+                break;
+
+            default:
+                console.log("Enter only the day between Sunday and Saturday");
+        }
+    </script>
+</body>
+
+</html>

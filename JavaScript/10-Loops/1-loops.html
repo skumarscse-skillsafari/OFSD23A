@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Loops">
+    <title>Loops</title>
+</head>
+
+<body>
+    <h1>Loops</h1>
+
+    <script>
+        // Loops
+        // Loops denotes to executing set of statements in repeat until some condition meets
+        // 1. while
+        // 2. do...while
+        // 3. for(;;)
+
+        // 1 to 10
+        // console.log(1);
+        // console.log(2);
+        // console.log(3);
+        // console.log(4);
+        // console.log(5);
+        // console.log(6);
+        // console.log(7);
+        // console.log(8);
+        // console.log(9);
+        // console.log(10);
+
+        // 1. Initialization => Starting of loop
+        // 2. Condition => Ending of the loop
+        // 3. Increment/Decrement => Pattern
+
+        // Initialization => 1
+        // Condition => till 10
+        // Increment => preValue + 1
+
+        // while => entry check loop
+        // Syntax
+        /*
+            initialization;
+            while (condition) {
+                // loop body
+                // increment/decrement
+            }
+        */
+        // let init = 1;
+        // while (init <= 10) { // 11 <= 10
+        //     console.log(`----- Iteration ${init}-------`);
+        //     console.log(`Value of init: ${init}`)
+        //     console.log(init); //  1 2 3 4 5 6 7 8 9 10
+        //     init++; // init = init + 1; // 10 + 1 => 11
+        // }
+
+        // Print first 10 even numbers
+        // Initialization => 2
+        // Condition => 20
+        // Increment
+        // let init = 1;
+        // while (init <= 20) { // 21 <= 20
+        //     if ((init % 2 == 0)) { // 20 % 2 => 0 == 0 //
+        //         console.log(init); // 2 4 6 8 10 12 14 16 18 20
+        //     }
+        //     init++; // init + 1 => 20 + 1 => 21
+        // }
+
+        //do...while() => exit-check loop
+        // Syntax
+        /*
+            initialization;
+            do {
+                // loop body
+                // increment/decrement;
+            } while(condition)
+        */
+        // let init = 1;
+        // do {
+        //     if (init % 2) { // 1 == 1 => 1
+        //         console.log(init);
+        //     }
+        //     init++;
+        // } while (init <= 20)
+
+        // let i = 1;
+        // do {
+        //     console.log(i); // 1
+        //     i++; 2
+        // } while (i < 1); // 2 < 1
+
+        // let i = 1;
+        // while (i < 1) {
+        //     console.log(i);
+        //     i++;
+        // }
+
+        // let init = 10;
+        // do {
+        //     if (!(init % 2)) {
+        //         console.log(init);
+        //     }
+        //     init--;
+        // } while (init >= 1);
+
+        // for(;;)
+        // Syntax
+        /*
+            for (initialization; condition; increment/decrement) {
+                // loop body
+            }
+        */
+        // for (let init = 1; init <= 10; init++) {
+        //     console.log(`${init} * 3 = ${init * 3}`); // 1 * 3 = 3
+        // }
+
+        // Skipping initialization
+        // let init = 1;
+        // for (; init <= 10; init++) {
+        //     console.log(`${init} * 3 = ${init * 3}`); // 1 * 3 = 3
+        // }
+
+        // Skipping initialization and increment
+        // let init = 1;
+        // for (; init <= 10;) {
+        //     console.log(`${init} * 3 = ${init * 3}`); // 1 * 3 = 3
+        //     init++;
+        // }
+
+        // break => break/exit from the loop based on certain condition
+        // for (let init = 1; init <= 10; init++) {
+        //     console.log(`${init} * 3 = ${init * 3}`); // 1 * 3 = 3
+        //     if (init == 5) break;
+        // }
+
+        // continue => Skip a iteration based on condition
+        // for (let init = 1; init <= 10; init++) {
+        //     if (init == 5) continue;
+        //     console.log(`${init} * 3 = ${init * 3}`); // 1 * 3 = 3
+        // }
+
+        // Print only first 10 EVEN numbers
+        // for (let init = 1; init <= 20; init++) {
+        //     if (!(init % 2) == 0) continue;
+        //     console.log(init);
+        // }
+
+        // for(;;)
+        // Nested Loop => Loop inside the Loop
+        // Syntax
+        /*
+            // Outer Loop
+            for (initialization; condition; increment/decrement) {
+                // outer loop body
+                // Inner Loop
+                for (initialization; condition; increment/decrement) {
+                    // inner loop body
+                }
+            }
+        */
+        // for (let init = 1; init <= 5; init++) {
+        //     console.log("Outer Loop");
+        //     console.log(init);
+        //     console.log("--------Inner loop----------");
+        //     for (let innerInit = 1; innerInit <= 3; innerInit++) {
+        //         console.log(innerInit);
+        //     }
+        //     console.log("-------------")
+        // }
+
+        for (let init = 1; init <= 3; init++) {
+
+            // console.log(init);
+
+            for (let innerInit = 1; innerInit <= 3; innerInit++) {
+                console.log(init);
+            }
+
+        }
+
+        // 1
+        // 1
+        // 1
+        // 2
+        // 2
+        // 2
+        // 3
+        // 3
+        // 3
+
+    </script>
+</body>
+
+</html>

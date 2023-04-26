@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Colors">
+    <title>CSS - Colors</title>
+    <style>
+        div {
+            height: 150px;
+            width: 150px;
+            background: grey;
+            margin-bottom: 2px;
+        }
+
+        .name {
+            background-color: dodgerblue;
+        }
+
+        .hex {
+            background-color: #124112;
+        }
+
+        .rgb {
+            background-color: rgb(148, 28, 156);
+        }
+
+        .rgba {
+            background-color: rgba(148, 28, 156, 40%);
+        }
+
+        .linear-gradient {
+            background: rgb(23, 164, 87);
+            background: linear-gradient(7deg, rgba(23, 164, 87, 1) 0%, rgba(148, 28, 156, 0.47) 41%, rgba(0, 212, 255, 1) 100%);
+        }
+
+        .radial-gradient {
+            background: rgb(63, 94, 251);
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 0.6504726890756303) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="name"></div>
+    <div class="hex"></div>
+    <div class="rgb"></div>
+    <div class="rgba"></div>
+    <div class="linear-gradient"></div>
+    <div class="radial-gradient"></div>
+</body>
+
+</html>

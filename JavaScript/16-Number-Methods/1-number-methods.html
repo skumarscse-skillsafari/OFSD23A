@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Number Methods">
+    <title>Number Methods</title>
+</head>
+
+<body>
+    <h1>Number Methods</h1>
+
+
+    <script>
+        // Number Methods
+        // Representing numbers
+        // Using "_"
+        // 1,000,000,000
+        // let billion = 1_000_000_000;
+        // console.log(billion);
+
+        // Using "e"
+        // console.log(1e9); // 1 * 1000000000
+        // console.log(1e3); // 1 * 1000
+        // console.log(4e3); // 4 * 1000
+        // console.log(3.5e3); // 3.5 * 1000
+        // console.log(5.500e5); // 5.500 * 100000
+
+        // console.log(1e-3); // 1 * 1 / 1000
+        // console.log(4.5e-3); // 4.5 * 1 / 1000
+
+        // console.log(+12.56789.toFixed(2));
+
+        // Rounding => Rounding decimal numbers
+        // 1. Math.floor() => Rounds down
+        // console.log(Math.floor(14.23)); // 14
+        // console.log(Math.floor(12.567)); // 12
+        // console.log(Math.floor(4.99)); // 4
+        // console.log(Math.floor(-4.99)); // -5
+
+        // // 2. Math.ceil() => Rounds up
+        // console.log(Math.ceil(12.34)); // 13
+        // console.log(Math.ceil(28.56)); // 29
+        // console.log(Math.ceil(18.99)); // 19
+        // console.log(Math.ceil(-4.99)); // -4
+
+        // // 3. Math.round()
+        // // .5 => base point
+        // // >= .5 => Rounds up
+        // // < .5 => Rounds down
+        // console.log(Math.round(12.23)); // 12
+        // console.log(Math.round(20.48)); // 20
+        // console.log(Math.round(19.52)); // 20
+        // console.log(Math.round(30.93)); // 31
+
+        // 4. Math.trunc()
+        // console.log(Math.trunc(12.32)); // 12
+        // console.log(Math.trunc(18.56)); // 18
+        // console.log(Math.trunc(20.90)); // 20
+        // console.log(Math.trunc(80.99)); // 80
+
+        // 5. Math.random() => 0.0 to 0.99
+        // console.log(Math.ceil(Math.random() * 100));
+
+        // 6. Math.min()
+        // console.log(Math.min(0, 12, -1, -3, 25));
+
+        // 7. Math.max()
+        // console.log(Math.max(0, 12, -1, -3, 25));
+
+        // 8. Math.pow()
+        // console.log(Math.pow(2, 10)); // 2^10 => 1024
+
+        // isNaN()
+        // isFinite()
+
+        // console.log(isNaN("Hello")); // true
+        // console.log(isNaN("123")); // false
+        // console.log(isNaN(123)); // false
+
+        // console.log(isFinite(123)); // true
+        // console.log(isFinite("Hello")); // false
+        // console.log(isFinite("123")); // true
+
+        // parseInt() => number + string => number
+        // console.log(parseInt("12px")); // 12
+        // console.log(parseInt("123Hello")); // 123
+        // console.log(parseInt("Hello123")); // NaN
+        // console.log(parseInt("12.5px")); // 12
+
+
+        // parseFloat() => decimal number + string => decimal number
+        // console.log(parseFloat("12.45px")); // 12.45
+        // console.log(parseFloat("123.45Hello")); // 123.45
+        // console.log(parseFloat("Hello123")); // NaN
+        // console.log(parseFloat("12px")); // 12
+
+
+
+
+
+    </script>
+</body>
+
+</html>

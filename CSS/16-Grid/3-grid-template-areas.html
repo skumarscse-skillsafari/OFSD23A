@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Grid - Template Areas" />
+    <title>CSS - Grid - Template - Areas</title>
+    <style>
+        /* Grid: Used to control the child elements in both x-axis and y-axis */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+            color: #222;
+        }
+
+        .container {
+            border: 5px solid red;
+            min-height: 100vh;
+            display: grid;
+            gap: 20px;
+            grid-template-areas:
+                "a a a"
+                "b b c"
+                "b b c"
+                "d e e"
+                "d e e";
+        }
+
+        .cell {
+            padding: 2rem;
+            background: #dedede;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            border: 3px solid green;
+            color: black;
+        }
+
+        .cell-1 {
+            grid-area: a;
+        }
+
+        .cell-2 {
+            grid-area: b;
+        }
+
+        .cell-3 {
+            grid-area: c;
+        }
+
+        .cell-4 {
+            grid-area: d;
+        }
+
+        .cell-5 {
+            grid-area: e;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Parent -->
+    <div class="container">
+        <!-- Child -->
+        <div class="cell cell-1">One</div>
+        <div class="cell cell-2">Two</div>
+        <div class="cell cell-3">Three</div>
+        <div class="cell cell-4">Four</div>
+        <div class="cell cell-5">Five</div>
+    </div>
+</body>
+
+</html>

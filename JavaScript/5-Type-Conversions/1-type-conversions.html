@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Type Conversions">
+    <title>Type Conversions</title>
+</head>
+
+<body>
+    <h1>Type Conversions</h1>
+
+
+    <script>
+        // Type Conversions
+        // String conversion
+        // Syntax
+        // String(value) => string
+        // let isAdmin = true;
+        // console.log(isAdmin); // true
+        // console.log(typeof isAdmin); // boolean
+
+        // console.log(typeof String(isAdmin));
+        // // 1 => "1"
+
+        // Numeric conversion
+        // Syntax
+        // Number(value) => number
+        // let age = "30";
+        // console.log(age);
+        // console.log(typeof Number(age));
+
+        // let numberOne = prompt("Enter the value: 1", 10);
+        // let numberTwo = prompt("Enter the value: 2", 10);
+        // let sum = Number(numberOne) + Number(numberTwo);
+        // console.log(`The sum of ${numberOne} and ${numberTwo} is: ${sum}`);
+
+        // unary plus "+"
+        // +variableName
+        // let numberOne = prompt("Enter the value: 1", 10); // "10"
+        // let numberTwo = prompt("Enter the value: 2", 10); // "10"
+        // let sum = +numberOne + +numberTwo;
+        // console.log(`The sum of ${numberOne} and ${numberTwo} is: ${sum}`);
+
+        console.log(Number("               123            ")); // 123
+        console.log(Number("               hello            ")); // NaN
+
+        // Boolean conversion
+        // Boolean(value) => boolean
+        // true, false
+        // 1, 0 
+        let isAdmin = 0;
+        console.log(Boolean(isAdmin));
+
+        // string value => true
+        // "true", "false", "hello", "123"
+
+        console.log(Boolean("")); // false
+        console.log(Boolean(" ")); // true
+        console.log(Boolean("0")); // true
+        console.log(Boolean(null)); // false
+
+        console.log(Boolean("               123            ")); // true
+
+        console.log(Boolean("John")); // true
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Box Model">
+    <title>CSS - Box Model</title>
+    <style>
+        /* 
+            // Box Model
+            1. Content
+            2. Padding
+            3. Border
+            4. Margin
+            CSS => Each and every element as box
+            height => top and bottom
+            width => right and left
+            Block - Level
+            Inline 
+        */
+        h1 {
+            background: green;
+            padding: 20px 40px;
+            border: 5px solid red;
+            /* border-width: 5px;
+            border-style: solid;
+            border-color: red; */
+            border-radius: 5px;
+            margin: 15px auto;
+            text-align: center;
+            width: 250px;
+        }
+
+        .circle {
+            height: 150px;
+            width: 150px;
+            background: crimson;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Heading</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, excepturi.</p>
+    <div class="container">
+        <h2>Sub heading</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <span id="one">Hello</span>
+    <span id="two">Welcome</span>
+    <div class="circle"></div>
+</body>
+
+</html>

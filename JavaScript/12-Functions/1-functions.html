@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Functions">
+    <title>Functions</title>
+</head>
+
+<body>
+    <h1>Functions</h1>
+
+    <script>
+        // Functions => Building block of a program
+        // input => proccess => output
+        // 1. Function declaration
+        // 2. Function calling
+        // Syntax
+        // parameter and arguments optional
+        // Function declaration
+        /*
+            function functionName(parameter-1, ..., parameter-N) {
+                // function body
+            }
+        */
+        // Function Calling
+        // Syntax
+        // functionName(argument, ..., argument-N)
+
+        // Function declaration
+        function add() {
+            let numOne = 12;
+            let numTwo = 20;
+            let sum = numOne + numTwo;
+            console.log(sum);
+        }
+
+        // // Function calling
+        // add();
+        // add();
+
+        // Local Variable
+        // Limits inside the block. ie outside the block cannot be accessed
+        // function displayMessage() {
+        //     let message = "Welcome...";
+        //     console.log(message); // Welcome...
+        //     message = "Hai";
+        //     console.log(message); // Hai...
+        // }
+        // displayMessage();
+        // let message = "Hello...";
+        // console.log(message); // Hello...
+
+        // Outer variable
+        // Can be accessed and modified inside and outside the block
+        // let num = 40;
+        // function sum() {
+        //     let numOne = 10;
+        //     let numTwo = 20;
+        //     let result = numOne + numTwo;
+        //     console.log(result); // 30
+        //     num = num + 10;
+        //     console.log(num); // 50
+        // }
+        // console.log(num); // 40
+        // sum();
+        // console.log(num); // 50
+
+        // Parameters
+        // function displayMessage(name) { // let name = "John"
+        //     console.log(`Welcome, ${name}`);
+        // }
+        // displayMessage("John"); // arguments
+        // displayMessage("Jack");
+        // displayMessage("Robert");
+        // // let name = "John";
+        // // console.log(name);
+
+        // let firstName = "John";
+        // function displayMessage(lastName) { // let lastName = "Jack"
+        //     firstName = "Mary";
+        //     lastName = "Robert";
+        //     let firstName;
+        //     firstName = "Prince";
+        //     console.log(`${firstName}, ${lastName}`)
+        // }
+        // displayMessage("Jack");
+
+        // default values
+        // function displayMessage(message = "Welcome") { // let message = "Welcome";
+        //     console.log(message);
+        // }
+        // displayMessage("Hello");
+
+        // return in function
+        // 1. one function must have only one "return" keyword
+        // 2. return must be used to send the final result of the function
+        // 3. return can be of expression or any primitive values
+        // function sum(numOne, numTwo) {
+        //     let result = numOne + numTwo;
+        //     return result; // 30
+        // }
+        // // let result = sum(10, 20);
+        // // console.log(result); // 30
+        // console.log(sum(10, 30)); // 40
+
+        // function returnDemo(num) {
+        //     return num;
+        //     console.log(num);
+        //     return num * 2;
+        //     return num * 3;
+        // }
+        // console.log(returnDemo(5));
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - em unit">
+    <title>CSS - em Unit</title>
+    <style>
+        /* 
+            em => relative to the parent element
+        */
+        .absolute {
+            font-size: 20px;
+        }
+
+        .absolute p {
+            font-size: 25px;
+        }
+
+        .relative {
+            font-size: 20px;
+        }
+
+        .relative p {
+            font-size: 2em;
+            /* em unit * parent element unit */
+            /* 2 * 20 => 40px */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Heading</h1>
+    <div class="absolute">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, impedit?</p>
+    </div>
+
+    <div class="relative">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, quaerat?
+        </p>
+    </div>
+</body>
+
+</html>

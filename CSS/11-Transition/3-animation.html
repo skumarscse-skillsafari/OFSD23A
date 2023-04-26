@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Animation">
+    <title>CSS - Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* 
+            CSS Animation
+            animation-name
+            animation-duration
+            animation-iteration-count
+            animation-timing-function
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+        */
+        .animation {
+            height: 150px;
+            width: 150px;
+            background: green;
+            animation-name: demo;
+            animation-duration: 3s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.33, -0.03, 0.24, 1.15);
+            animation-delay: 3s;
+            animation-fill-mode: forwards;
+
+        }
+
+        .animation:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes demo {
+            0% {
+                transform: translateY(300px);
+            }
+
+            /* 25% {
+                transform: translateX(200px);
+            } */
+
+
+            50% {
+                transform: translateX(300px) translateY(300px);
+                border-radius: 50%;
+                background: blue;
+            }
+
+            /* 75% {
+                transform: translateX(200px);
+            } */
+
+            100% {
+                transform: translateX(300px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animation"></div>
+    <!-- <h1 class="animate__animated animate__fadeInLeft">Heading</h1> -->
+</body>
+
+</html>

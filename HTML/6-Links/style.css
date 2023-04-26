@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  background: green;
+  padding: 20px 60px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+
+.footer {
+  color: black;
+}
+
+.fa-facebook {
+  color: blue;
+  font-size: 40px;
+}

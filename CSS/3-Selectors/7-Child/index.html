@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Child Selector">
+    <title>Child Selector</title>
+    <style>
+        /* 
+            Child Selector
+            1. Combinator selector
+            Syntax
+            refernceSelector(parent) > selector {
+                property: propertyValue;
+            }
+        */
+        #about>p,
+        #about>div>.para {
+            color: red;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="about">
+        <h2>About Section</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, reprehenderit?</p>
+        <div>
+            <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, at!</p>
+        </div>
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Mango</li>
+            <li>Banana</li>
+        </ul>
+    </div>
+    <hr>
+    <div id="projects">
+        <h2>Projects Section</h2>
+        <p id="underline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, reprehenderit?</p>
+        <ul class="list">
+            <li>To-Do app</li>
+            <li>Task manager app</li>
+            <li>Notes taking app</li>
+            <li>Blog website</li>
+        </ul>
+    </div>
+    <hr>
+    <div id="contact">
+        <h2>Contact Section</h2>
+        <form action="#">
+            <p><input type="text" name="fname" id="fname" placeholder="Enter Fullname"></p>
+            <p><input type="email" name="email" id="email" placeholder="Enter email"></p>
+            <p><input type="submit" value="Submit"></p>
+        </form>
+
+    </div>
+</body>
+
+</html>

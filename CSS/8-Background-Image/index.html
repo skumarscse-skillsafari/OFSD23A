@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - BG - Images">
+    <title>CSS - BG - Images</title>
+    <style>
+        .image-one {
+            background: url("./images/image-one.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            border: 2px solid red;
+        }
+
+        .image-two {
+            border: 1px solid red;
+            background: url("./images/image-two.jpg");
+            background-repeat: no-repeat;
+            /* background-repeat: repeat-y; */
+            /* background-size: cover;
+            background-position: center; */
+            /* background-size: cover; */
+            /* background-position: center; */
+            /* background-position: 10% 10%; */
+            background-position: center;
+            background-attachment: fixed;
+            height: 600px;
+            width: 600px;
+        }
+
+        .image-three {
+            height: 600px;
+            border: 1px solid red;
+            /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(234, 234, 241, 0.12106092436974791) 35%, rgba(0, 212, 255, 1) 100%), url("./images/image-three.jpg"); */
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(234, 234, 241, 0.12106092436974791) 35%, rgba(0, 212, 255, 1) 100%), url("./images/image-three.jpg") no-repeat center/cover fixed;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="image-one"></div>
+    <div class="image-two"></div>
+    <div class="image-three"></div>
+    <h1>Heading</h1>
+</body>
+
+</html>

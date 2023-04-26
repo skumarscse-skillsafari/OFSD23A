@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Constructor">
+    <title>Constructor</title>
+</head>
+
+<body>
+    <h1>Constructor</h1>
+
+    <script>
+        // Constructor
+        // Similar like a function
+        // Nmae of the constructor function must be in Pascal notation
+        // Ex: UserDetails, ShowMessage
+        // Constructor function can be initialized by using "new" keyword
+
+        // function showMessage() {
+        //     console.log("Hello");
+        // }
+        // showMessage();
+
+        // function UserDetails() {
+        //     console.log("John");
+        // }
+        // new UserDetails();
+
+
+        // function userDetails(name, age, isAdmin) {
+        //     return {
+        //         name: name,
+        //         age: age,
+        //         isAdmin: isAdmin
+        //     }
+        // }
+        // console.log(userDetails("John", 25, true));
+        // console.log(userDetails("Jack", 30, false));
+
+        function UserDetails(name, age, isAdmin) {
+            // implicitly
+            // let this = {};
+            this.name = name;
+            this.age = age;
+            this.isAdmin = isAdmin;
+            // implicitly
+            // return this;
+        }
+        // let john = new UserDetails("John", 25, true);
+        // console.log(john);
+        // let jack = new UserDetails("Jack", 30, false);
+        // console.log(jack);
+        // let mary = new UserDetails("Mary", 27, false);
+        // console.log(mary);
+
+        function UserName(name) {
+            this.name = name;
+            this.displayName = function () {
+                console.log(`User name is: ${this.name}`);
+            }
+        }
+        new UserName("John").displayName();
+        console.log(new UserName("Jack").name);
+    </script>
+</body>
+
+</html>

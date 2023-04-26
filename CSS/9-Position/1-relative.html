@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Desccription" content="CSS - Position">
+    <title>CSS - Position</title>
+    <style>
+        /* 
+        offset => top, left, right, bottom
+        position: relative;
+        */
+        div {
+            height: 150px;
+            width: 150px;
+            margin-bottom: 5px;
+            background: red;
+        }
+
+        .one {
+            background: green;
+            position: relative;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .two {
+            background: blue;
+        }
+
+        .three {
+            background: coral;
+            position: relative;
+            left: 50%;
+        }
+
+        .four {
+            background: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+</body>
+
+</html>

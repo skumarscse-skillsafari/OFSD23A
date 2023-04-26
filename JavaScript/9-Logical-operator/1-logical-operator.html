@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Logical Operator">
+    <title>Logical Operator</title>
+</head>
+
+<body>
+    <h1>Logical Operator</h1>
+
+
+    <script>
+        // Logical Operator
+        // 1. OR => ||
+        // 2. AND => &&
+        // 3. NOT => !
+        // 4. Nullish Coaleshing => ??
+
+        // Result can be both Boolean and anytype
+
+        // (12 > 5) || (3 < 5)
+        // OR => ||
+        // Binary operator => accepts two operands
+        // a || b => result
+        // (12 > 5) || (3 < 5) => true || true => true
+        // console.log((12 > 5) || (3 < 5)); // true
+        // true || true => true
+        // true || false => true
+        // false || true => true
+        // false || false => false
+
+        // HSC >= 60
+        // UG >= 70
+        // PG >= 75
+        // if anyone condition true, can attend interview
+        // let hsc = +prompt("Enter hsc percentage");
+        // let ug = +prompt("Enter ug percentage");
+        // let pg = +prompt("Enter pg percentage");
+        // if (hsc >= 60) {
+        //     console.log("Eligile")
+        // } else if (ug >= 70) {
+        //     console.log("Eligible")
+        // } else if (pg >= 75) {
+        //     console.log("Eligible")
+        // } else {
+        //     console.log("Not eligible")
+        // }
+        // hsc = 50
+        // ug = 60
+        // pg = 70
+        // false || false => false || false => false
+        // if (hsc >= 60 || ug >= 70 || pg >= 75) console.log("Eligible")
+        // else console.log("Not eligible")
+
+        // "OR" => Checks for first "truthy" value
+        // In an expression, if anyone of the operand is true, return that operand result or value and exit from the expression
+        // if anyone of the operand truns "true", return last operand result or value
+
+        // (20 > 5) || (12 < 25) || (23 > 12) || (10 == 9)
+        // console.log((20 > 5) || (12 < 25) || (23 > 12) || (10 == 9)); // true
+        // console.log((20 < 5) || (12 > 25) || (23 < 12) || (10 == 9)); // false
+
+        // console.log(25 < 5 || 18 < 5 || "123");
+
+        // // short-circuit
+        // // a || b
+        // // If a, is true return "a"
+        // // if a is not true return "b"
+
+        // console.log(12 > 5 || 10 < 5); // true
+        // console.log(12 < 5 || 10 < 5); // false
+
+        // console.log(" " || "Hello");
+
+        // let user = "John";
+        // console.log(user || "Guest User...");
+
+        // AND => &&
+        // Binary operator
+        // true && true => true
+        // true && false => false
+        // false && true => false
+        // false && false => false
+
+        // console.log(20 > 5 && 12 < 5 && 10 == 7 && 12 > 50); // true && false => false && false => false && false => false
+
+        // AND
+        // Checks for first "falsy" value
+        // In an expression,
+        // if anyone of the operand turns "false", return its value and comeout of the evaluation
+        // if all the operand are true, return last operand value
+        // console.log(20 > 5 && 12 > 5 && "Hello" && 123);
+        // console.log(20 < 5 && 12 > 5 && "Hello" && 123);
+
+        // short-circuit
+        // a && b
+        // if a "false", return "a"
+        // if a "true", return "b"
+
+        // console.log(1 && false);
+
+        // NOT
+        // unary operator
+        // true => false
+        // false => true
+
+        // if (!true) {
+        //     console.log("I am from if block")
+        // } else {
+        //     console.log("I am from else block")
+        // }
+
+        // Nullish Coaleshing (??)
+        // Used to check the variable if defined or not
+        // a ?? b
+        // if a is defined return "a"
+        // if a is not defined return "b"
+
+        let a = null;
+        console.log(a ?? "Hello");
+
+        console.log(false ?? true);
+
+        let height = 0;
+        console.log(0 ?? 100); // 0 
+        console.log(0 || 100); // 100
+
+    </script>
+</body>
+
+</html>

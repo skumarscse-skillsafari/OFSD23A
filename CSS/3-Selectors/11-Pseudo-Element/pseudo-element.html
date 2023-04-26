@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Pseudo Element">
+    <title>Pseudo Element</title>
+    <style>
+        /* 
+            Pseudo Element => Inline
+            // Syntax
+            selector::pseudoElement {
+                property: propertyValue;
+            }
+        */
+
+        h1::before {
+            content: "";
+            display: block;
+            border-top: 5px solid crimson;
+            width: 230px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            border-top: 5px solid crimson;
+            width: 230px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is Heading</h1>
+    <p>This is Paragraph</p>
+</body>
+
+</html>

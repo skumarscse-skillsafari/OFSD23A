@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Embed Audio, Video and Image">
+    <title>Embed Audio, Video and Image</title>
+    <style>
+        img {
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Embed - Audio, Video and Image</h1>
+    <h2>Image</h2>
+    <!-- 
+        <img> => Self-closing tag, Inline element
+        <img src="image-path" alt="alternate-text" height="" width="">
+        Path
+        1. Absolute path => Starts from the root folder/drive
+        2. Relative path => Starts from the current folder
+     -->
+    <!-- Image with Absolute path -->
+    <img src="F:\SkillSafari\Offline-2\HTML\5-Embed-Audio-Video-Image\images\image-one.jpg" alt="image-one">
+    <img src="F:\SkillSafari\Offline-2\HTML\5-Embed-Audio-Video-Image\images\image-two.jpg" alt="image-two">
+
+    <!-- Image with Relative path -->
+    <img src="./images/image-three.jpg" alt="image-three">
+
+    <!-- Image from external resource -->
+    <img src="https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w="
+        alt="external-image">
+    <hr>
+    <h2>Audio</h2>
+    <!-- 
+        <audio controls autoplay>
+            <source src="audio-path" type=audio/mp3>
+        </audio>
+     -->
+    <audio controls>
+        <source src="./audios/shape-of-you.mp3" type="audio/mp3">
+    </audio>
+    <hr>
+    <h2>Video</h2>
+    <!-- 
+        <video controls autoplay>
+            <source src="video-path" type=video/mp4>
+        </video>
+     -->
+    <video controls>
+        <source src="./videos/videoplayback.mp4" type="video/mp4">
+    </video>
+</body>
+
+</html>

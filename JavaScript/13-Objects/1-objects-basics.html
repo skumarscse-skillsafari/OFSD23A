@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Object - Basics">
+    <title>Object - Basics</title>
+</head>
+
+<body>
+    <h1>Objects - Basics</h1>
+
+    <script>
+        // Objects - Basics
+        // It is a collection, stores the data in the form of key: value pair
+        // or keyed collection of data
+        // Object can be created as an empty object with optional properties
+
+        // let userDetails = {
+        //     name: "John",
+        //     age: 30,
+        //     isAdmin: true
+        // };
+
+        // console.log(userDetails);
+
+        // Creating an Object
+        // Empty object
+        // 1. let user = new Object(); // Object constructor syntax
+        // 2. let user = {}; // object literal syntax
+
+        // Object literal syntax
+        // let objName = {
+        // key: value,
+        // }
+        // {...} => object literal area
+        // key: value; => key => propertyName and value => propertyValue
+        // combination of key: value or propertyName: propertyValue => property
+        // collection of property => properties
+
+        // Object Creation
+        // let userDetails = {};
+        // console.log(userDetails);
+
+        // // Adding properties
+        // // Syntax
+        // // objName.propertyName = proprtyValue;
+        // userDetails.name = "John";
+        // userDetails.age = 30;
+        // userDetails.isAdmin = true;
+        // console.log(userDetails);
+
+        // // Accessing the object propertyValue
+        // // Syntax
+        // // objName.propertyName => returns corresponding propertyName "value"
+        // console.log(userDetails.age);
+        // console.log(userDetails.isAdmin);
+
+        // // Modifying object propertyValue
+        // // Syntax
+        // // objName.existingPropertName = newValue;
+        // userDetails.name = "Jack";
+        // console.log(userDetails);
+
+        // // deleting property
+        // // Syntax
+        // // delete objName.existingPropertyName
+        // delete userDetails.isAdmin;
+        // console.log(userDetails);
+
+        // Using multi-word properties
+        // Square bracket method
+        // let userDetails = {
+        //     ["first name"]: "John",
+        //     ["last name"]: "Jack",
+        //     age: 30
+        // }
+        // console.log(userDetails["age"]);
+        // Accessing propertyValue
+        // Syntax
+        // objName.propertyName
+        // objName["property name"]
+        // userDetails["first name"];
+        // // Add
+        // userDetails["date of birth"] = "12-12-2023";
+        // console.log(userDetails);
+
+        // // Modify
+        // userDetails["first name"] = "Robert";
+        // console.log(userDetails);
+
+        // // delete
+        // delete userDetails["date of birth"];
+        // console.log(userDetails);
+
+        // let userDetails = {
+        //     firstName: "John",
+        //     ["last name"]: "Jack",
+        //     age: 30,
+        //     isAdmin: true
+        // }
+        // let key = prompt("Enter any property key");
+        // console.log(userDetails[key]);
+
+        // iterating all the object properties
+        // for...in
+        // for (let varName in objName) {
+        // console.log(varName)
+        // }
+        // for (const key in userDetails) {
+        //     console.log(typeof key);
+        //     console.log(`${key} => ${userDetails[key]}`); // firstName last name age isAdmin
+        // }
+
+        // // "in" operator => check propery existance
+        // // Syntax
+        // // Boolen => true or false
+        // // "propName" in objName
+        // console.log("city" in userDetails);
+
+
+        // Objects in function
+        // function userDetails(firstName, lastName, age) {
+        //     return `${firstName} ${lastName} ${age}`;
+        // }
+        // console.log(userDetails("John", "Jack", 30))
+        // Short-hand notation
+        // function userDetails(firstName, lastName, age) {
+        //     return {
+        //         firstName, // firstName: firstName, // propertyName
+        //         lastName, // lastName: lastName,
+        //         userAge: age // age: age
+        //     }
+        // }
+        // console.log(userDetails("John", "Jack", 30));
+
+
+        // Nested properties
+        let userDetails = {
+            name: "John",
+            age: 30,
+            isAdmin: true,
+            address: {
+                city: "Chennai",
+                state: "Tamilnadu"
+            }
+        };
+
+        console.log(userDetails);
+        console.log(userDetails.address);
+        console.log(userDetails.address.city);
+        console.log(userDetails.address.state);
+
+
+
+    </script>
+</body>
+
+</html>

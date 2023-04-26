@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Transform : Rotate">
+    <title>Transform: Rotate</title>
+    <style>
+        /* 
+        Transform
+        1. Translate
+        2. Scale
+        3. Rotate
+        4. Skew
+        */
+
+        .rotate {
+            height: 200px;
+            width: 200px;
+            background: green;
+            margin: 0 auto;
+            transform: translateY(50%);
+            /* transform: rotate(360deg); */
+            /* transform: rotateX(180deg); */
+            transform: rotateY(180deg);
+        }
+
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        h1 {
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rotate">
+        <h1>Heading</h1>
+    </div>
+</body>
+
+</html>

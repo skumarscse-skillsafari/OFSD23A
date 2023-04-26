@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Function Expression">
+    <title>Function Expression</title>
+</head>
+
+<body>
+    <h1>Function Expression</h1>
+
+    <script>
+        // Function Expression
+        // let num = 10;
+        // console.log(num); // 10
+
+        // Syntax
+        // Declaration
+        // let varName = function () {
+        // function body
+        // }
+        // Calling
+        // varName()
+
+        // let sum = function () {
+        //     let numOne = 20;
+        //     let numTwo = 40;
+        //     let result = numOne + numTwo;
+        //     console.log(result); // 60
+        // }
+        // sum();
+
+        // let displayMessage = function (name = "Prince") {
+        //     console.log(`Welcome, ${name}`);
+        // }
+        // displayMessage();
+        // displayMessage("Jack");
+        // displayMessage("Mary");
+        // displayMessage("Robert");
+
+        // return
+        // let square = function (num) {
+        //     return num * num;
+        // }
+        // console.log(square(20));
+
+        // Function Declaration Vs. Function Expression
+        // displayAge(20);
+        // function displayAge(age) {
+        //     console.log(age); // 20
+        // }
+
+        // displayCity("Chennai"); // Error
+        // let displayCity = function (city) {
+        //     console.log(city); // "Chennai"
+        // }
+
+
+        // let funOne = function (numOne, numTwo) {
+        //     console.log(numOne + numTwo); // 30
+        // }
+        // funOne(10, 20);
+
+        // let funTwo = funOne;
+        // funTwo(5, 8); // 13
+
+        // Callback Function
+        // Passing function as an parameter
+        function getName(firstName, lastName, displayName) {
+            // let firstName = "John", let lasName  = "Jack"
+            // let displayName = displayName
+            let name = `${firstName}, ${lastName}`;
+            displayName(name);
+        }
+        let displayName = function (name) {
+            console.log(name);
+        }
+        getName("John", "Jack", displayName);
+
+
+    </script>
+</body>
+
+</html>

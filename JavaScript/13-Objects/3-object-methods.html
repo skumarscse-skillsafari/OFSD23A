@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Object - Methods">
+    <title>Object - Methods</title>
+</head>
+
+<body>
+    <h1>Object - Methods</h1>
+
+    <script>
+        // Object - Methods
+        // function fruits() {
+        //     console.log("Apple");
+        // }
+        // fruits();
+
+        // let fruits = function () {
+        //     console.log("Apple");
+        // }
+        // fruits();
+
+        // let details = {
+        //     name: "John",
+        //     age: 30
+        // }
+        // details.newProp = fruits;
+        // console.log(details);
+        // details.newProp();
+
+        // let details = {
+        //     name: "John",
+        //     age: 30,
+        //     newProp() {
+        //         console.log("Hello")
+        //     }
+        // }
+        // console.log(details);
+        // details.newProp();
+
+        let userDetails = {
+            name: "John",
+            displayMessage() {
+                console.log(`Welcome, ${this.name}`);
+                console.log(`Welcome, ${userDetails.name}`);
+            }
+        }
+        userDetails.displayMessage();
+
+        let objOne = { name: "John" };
+        let objTwo = { name: "Jack" };
+
+        let displayMessage = function () {
+            console.log(`Welcome, ${this.name}`)
+        }
+
+        objOne.newProp = displayMessage;
+        objTwo.newProp = displayMessage;
+        console.log(objOne);
+        console.log(objTwo);
+
+        objOne.newProp();
+        objTwo.newProp();
+    </script>
+</body>
+
+</html>

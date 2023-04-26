@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS Variables">
+    <title>CSS - Variables</title>
+    <style>
+        /* 
+        Variable Declaration
+        // :root
+        // key: value;
+        // --color: blue;
+        // --margin-20: 20px;
+
+        // Accessing the css variable
+        h1 {
+            color: var(--color);  // color: green;
+        }
+        */
+        :root {
+            --color: blue;
+            --padding-10: 10px;
+        }
+
+        h1 {
+            color: var(--color);
+            border: 1px solid red;
+            padding: var(--padding-10);
+        }
+
+        h2 {
+            color: var(--color);
+        }
+
+        p {
+            color: var(--color);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Heading</h1>
+    <h2>Sub-Heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eligendi expedita aliquam veritatis laudantium
+        inventore placeat provident incidunt itaque consequatur. Harum accusamus et dolores modi.</p>
+</body>
+
+</html>

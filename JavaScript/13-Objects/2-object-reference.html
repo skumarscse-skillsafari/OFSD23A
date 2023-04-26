@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Object references">
+    <title>Object references</title>
+</head>
+
+<body>
+    <h1>Object references</h1>
+
+    <script>
+        // Object references
+        // Prmitive datatype => copy by value
+        // let name = "John";
+        // let newName = name;
+        // // console.log(name);
+        // // console.log(newName);
+        // name = "Jack";
+        // console.log(name);
+        // console.log(newName);
+
+        // Non-primitive => copy by reference
+        // let objOne = { name: "John" };
+        // let objTwo = objOne;
+        // console.log(objOne);
+        // console.log(objTwo);
+        // objTwo.age = 30;
+        // console.log(objOne);
+        // console.log(objTwo);
+
+        // let userDetails = {
+        //     name: "John",
+        //     age: 30,
+        //     isAdmin: false
+        // }
+        // let newUserDetails = {};
+        // for (const key in userDetails) {
+        //     newUserDetails[key] = userDetails[key];
+        //     // newUserDetails["name"] = userDetails["name"] => "John"
+        // }
+        // console.log(userDetails);
+        // console.log(newUserDetails);
+        // newUserDetails.city = "Chennai";
+        // userDetails.state = "Tamilnadu";
+        // console.log(userDetails);
+        // console.log(newUserDetails);
+
+        // Object.assign(destinationObj, sourceObj-1, sourceobj-2,..., sourceobj-N)
+        // clone, merging
+
+        // Cloning and Merging
+        let name = { name: "John" }
+        let age = { age: 30 }
+        let city = { city: "Chennai" }
+        let userDetails = {};
+        Object.assign(userDetails, name, age, city, { isAdmin: false });
+        console.log(userDetails);
+        age.newAge = 40;
+        console.log(userDetails);
+        console.log(age);
+
+        let jack = {
+            address: {
+                city: "Bangalore",
+                state: "Karnataka"
+            }
+        }
+        Object.assign(userDetails, jack);
+        console.log(userDetails);
+
+
+
+
+    </script>
+</body>
+
+</html>;

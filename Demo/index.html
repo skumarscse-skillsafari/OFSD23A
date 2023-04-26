@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Embed Resources - Image, Audio, Video</title>
+    <style>
+        img {
+            height: 250px;
+            width: 250px;
+        }
+
+        #special {
+            height: 150px;
+            width: 150px;
+        }
+
+        video {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Embed - Image, Audio, Video</h1>
+    <!-- 
+        Image
+        <img src="path_of_the_image" alt="alternate_text"> => inline, self-closing tag
+        1. Internal Image
+        2. External Image
+
+        Path
+        1. Absolute => Actual
+        2. Relative
+     -->
+    <h2>Embed Image</h2>
+    <h3>Internal Image</h3>
+    <img src="./images/image-one.jpg" alt="image-one">
+    <img id="special" src="./images/image-two.jpg" alt="image-two">
+
+    <h3>External Image</h3>
+    <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80"
+        alt="external-image">
+    <hr>
+    <h2>Embed Audio</h2>
+    <!-- 
+        <audio controls autoplay>
+            <source src="path" type="audio/mp3">
+        </audio>
+     -->
+    <audio controls>
+        <source src="./audios/shape-of-you.mp3" type="audio/mp3">
+    </audio>
+    <hr>
+    <h2>Embed Video</h2>
+    <!-- 
+        <video controls autoplay>
+            <source src="path" type="video/mp4">
+        </video>
+     -->
+    <video controls>
+        <source src="./videos/videoplayback.mp4" type="video/mp4">
+    </video>
+</body>
+
+</html>
