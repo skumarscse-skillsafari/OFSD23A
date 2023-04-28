@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Map" />
+    <title>Map</title>
+  </head>
+  <body>
+    <h2>Map</h2>
+
+    <script>
+      // Map => Similar like Object
+      // Property name can be of any type
+      // Object => Storing keyed collection
+      // Map => Storing ordered collection
+
+      // Creating Map constructor
+      // Syntax
+      // let varName = new Map()
+      //   let subjects = new Map();
+      //   console.log(subjects);
+
+      // Supporting methods and property
+      // 1. map.set("key", "value") => Add new property with the "key" and "value" passed
+      // 2. map.get("key") => return property "value" based on "key" passed
+      // 3. map.has("key") => check the existance of the "key" passed
+      // 4. map.clear() => removes all the properties in the "Map"
+      // 5. map.delete("key") => remove the property based on "key"
+      // 6. map.forEach()
+      // 7. keys()
+      // 8. values()
+      // 9. entries()
+      // 10. size
+
+      // Adding properties
+      //   subjects.set("name", "John");
+      //   subjects.set("age", 25);
+      //   subjects.set("city", "Chennai");
+      //   console.log(subjects);
+
+      // Accessing properties
+      //   console.log(subjects.get("city"));
+
+      // Checking existance of the property
+      //   console.log(subjects.has("age"));
+      //   console.log(subjects.has("state"));
+
+      // delete
+      //   subjects.delete("city");
+      //   console.log(subjects);
+
+      // clear()
+      //   subjects.clear();
+      //   console.log(subjects);
+      //   console.log(subjects.size);
+
+      // key as object
+      //   let userDetails = new Map();
+      //   let john = { name: "John" };
+      //   let jack = { name: "Jack" };
+      //   let mary = { name: "Mary" };
+
+      //   userDetails.set(john, "Admin").set(jack, "Sales").set(mary, "Operations");
+
+      //   console.log(userDetails);
+
+      // Another way of adding properties
+      //   let fruits = new Map([
+      //     ["apple", 35],
+      //     ["mango", 25],
+      //     ["orange", 40],
+      //   ]);
+      //   console.log(fruits);
+
+      // key()
+      //   console.log(fruits.keys());
+      //   for (const fruitKey of fruits.keys()) {
+      //     console.log(fruitKey);
+      //   }
+
+      // values()
+      //   console.log(fruits.values());
+      //   for (const fruitValue of fruits.values()) {
+      //     console.log(fruitValue);
+      //   }
+
+      // entries()
+      //   console.log(fruits.entries());
+      //   for (const [key, value] of fruits) {
+      //     console.log(`Key => ${key} and Value => ${value}`);
+      //     // console.log(fruit);
+      //   }
+
+      // forEach((value, key, Map))
+      //   fruits.forEach((value, key) => {
+      //     console.log(`Key => ${key} and Value => ${value}`);
+      //   });
+
+      // Object.entries() => Object to Map
+
+      //   let userObj = {
+      //     name: "John",
+      //     age: 24,
+      //     city: "Chennai",
+      //   };
+      //   console.log(userObj);
+
+      //   let userMap = new Map(Object.entries(userObj));
+      //   console.log(userMap);
+
+      // Object.fromEntries() => Map to Object
+      //   let fruitsMap = new Map([
+      //     ["apple", 25],
+      //     ["mango", 35],
+      //     ["orange", 40],
+      //   ]);
+      //   console.log(fruitsMap);
+      //   let fruitsObj = Object.fromEntries(fruitsMap);
+      //   console.log(fruitsObj);
+
+      let fruitsObj = {
+        apple: 20,
+        mango: 30,
+        orange: 40,
+      };
+      console.log(fruitsObj);
+      let newFruitsObj = Object.fromEntries(
+        Object.entries(fruitsObj).map((fruit) => {
+          return [fruit[0], fruit[1] * 2];
+        })
+      );
+      console.log(newFruitsObj);
+    </script>
+  </body>
+</html>
