@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="WeakSet" />
+    <title>WeakSet</title>
+  </head>
+  <body>
+    <h2>WeakSet</h2>
+
+    <script>
+      // WeakSet
+      let weakset = new WeakSet();
+
+      console.log(weakset);
+
+      let john = { name: "John" };
+      let jack = { name: "Jack" };
+
+      weakset.add(john);
+      weakset.add(john);
+      weakset.add(john);
+      weakset.add(jack);
+      weakset.add(jack);
+      weakset.add(jack);
+
+      console.log(weakset);
+
+      // Supported Methods
+      // add()
+      // has()
+      // delete()
+    </script>
+  </body>
+</html>

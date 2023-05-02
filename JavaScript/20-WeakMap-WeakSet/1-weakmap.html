@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="WeakMap" />
+    <title>WeakMap</title>
+  </head>
+  <body>
+    <h2>WeakMap</h2>
+
+    <script>
+      // WeakMap
+      let weakMap = new WeakMap();
+
+      console.log(weakMap);
+
+      let john = { name: "John" };
+      let jack = { name: "Jack" };
+      weakMap.set(john, "John Details");
+      weakMap.set(jack, "Jack Details");
+
+      console.log(weakMap);
+
+      // Supported Methods
+      // set()
+      // get()
+      // has()
+      // delete()
+
+      // No supported methods
+      // clear()
+      // keys()
+      // values()
+      // forEach()
+      // size
+    </script>
+  </body>
+</html>
