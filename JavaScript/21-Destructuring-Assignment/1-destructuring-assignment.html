@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Destructuring Assignment" />
+    <title>Destructuring Assignment</title>
+  </head>
+  <body>
+    <h2>Destructuring Assignment</h2>
+
+    <script>
+      // Destructuring Assignment => Unpacking the properties or elements from Object or Array
+      // Objects and Arrays
+      //   let john = { name: "John", age: 30 };
+      //   let names = ["John", "Jack", "Mary"];
+
+      // Arrays
+      // Syntax
+      // let [var-1, var-2,..., var-N] = [ "ele-1", "ele-2",..., "ele-N"]
+      // Left-hand side = Variables
+      // Right-hand side = Array
+
+      let fruits = ["Apple", "Orange", "Mango"];
+      //   console.log(fruits[0]);
+      //   console.log(fruits[1]);
+      //   console.log(fruits[2]);
+      //   let [fruitOne, fruitTwo, fruitThree] = fruits; // ["Apple", "Orange", "Mango"]
+      //   console.log(fruitOne);
+      //   console.log(fruitTwo);
+      //   console.log(fruitThree);
+
+      // Destructure Array like values
+      //   let [firstName, lastName] = "John, Jack".split(", "); // [ "John", "Jack"]
+      //   console.log(firstName);
+      //   console.log(lastName);
+
+      //   let [userOne, userTwo] = new Set(["John", "Jack"]);
+      //   console.log(userOne);
+      //   console.log(userTwo);
+
+      // Skip the assignment using ","
+      //   let userNames = ["John", "Jack", "Mary", "Robert"];
+      //   let [, , userThree] = userNames;
+      //   console.log(userThree);
+
+      // Swap two values
+      //   let [numOne, numTwo] = [1, 2];
+      //   console.log("Before Swap");
+      //   console.log(numOne);
+      //   console.log(numTwo);
+      //   [numOne, numTwo] = [numTwo, numOne];
+      //   console.log("After Swap");
+      //   console.log(numOne);
+      //   console.log(numTwo);
+
+      // rest variable
+      //   let [subjectOne, subjectTwo, ...restSubjects] = [
+      //     "English",
+      //     "Maths",
+      //     "Physics",
+      //     "Chemistry",
+      //     "Computer",
+      //   ];
+      //   console.log(subjectOne);
+      //   console.log(subjectTwo);
+      //   console.log(restSubjects);
+      //   let [, subjectFour] = restSubjects;
+      //   console.log(subjectFour);
+
+      //   let matrix = [
+      //     [1, 2, 3],
+      //     [4, 5, 6],
+      //     [7, 8, 9],
+      //   ];
+      //   let [
+      //     [cell1, cell2, cell3],
+      //     [cell4, cell5, cell6],
+      //     [cell7, cell8, cell9],
+      //   ] = matrix;
+      //   console.log(cell1);
+      //   console.log(cell2);
+      //   console.log(cell3);
+      //   console.log(cell4);
+      //   console.log(cell6);
+      //   console.log(cell6);
+      //   console.log(cell7);
+      //   console.log(cell8);
+      //   console.log(cell9);
+
+      // Smart functions
+      //   function num([num1, ...num2]) {
+      //     console.log(num1);
+      //     console.log(num2);
+      //   }
+      //   num([1, 2, 3]);
+
+      // Object Destructuring
+      // Syntax
+      // let {prop-1, prop-2,..., prop-N} = {prop-1: value, prop-2: value,..., prop-N: value}
+      //   let { name, age, city } = { name: "John", age: 35, city: "Chennai" };
+      //   console.log(name);
+      //   console.log(age);
+      //   console.log(city);
+
+      // Change the order
+      //   let { city, name, age } = { name: "John", age: 35, city: "Chennai" };
+      //   console.log(name);
+      //   console.log(age);
+      //   console.log(city);
+
+      // Alias name for properties
+      // let {prop-1: aliasname-1, prop-2: aliasname-2,..., prop-N: aliasName-N} = {prop-1: value, prop-2: value,..., prop-N: value}
+      //   let {
+      //     name: n,
+      //     age: a,
+      //     city: c,
+      //   } = { name: "John", age: 35, city: "Chennai" };
+      //   console.log(n);
+      //   console.log(a);
+      //   console.log(c);
+
+      // rest variable
+      //   let { name: n, ...restProp } = { name: "John", age: 35, city: "Chennai" };
+      //   console.log(n);
+      //   console.log(restProp);
+      //   let { age: a, city: c } = restProp;
+      //   console.log(a);
+      //   console.log(c);
+
+      // Nested Properties
+      //   let userDetails = {
+      //     name: {
+      //       firstName: "John",
+      //       lastName: "Jack",
+      //     },
+      //     age: 25,
+      //     hobbies: ["Cricket", "Football"],
+      //   };
+      //   let {
+      //     name: { firstName, lastName },
+      //     age,
+      //     hobbies: [hobbyOne, hobbyTwo],
+      //   } = userDetails;
+      //   console.log(firstName);
+      //   console.log(lastName);
+      //   console.log(age);
+      //   console.log(hobbyOne);
+      //   console.log(hobbyTwo);
+
+      //   function userDetails({ name: n, ...restProp }) {
+      //     console.log(n);
+      //     let { age: a, city: c } = restProp;
+      //     console.log(a);
+      //     console.log(c);
+      //   }
+      //   userDetails({ name: "John", age: 25, city: "Chennai" });
+    </script>
+  </body>
+</html>
