@@ -89,12 +89,23 @@
       //   console.log(cell8);
       //   console.log(cell9);
 
+      // Default values
+      // let [nameOne, nameTwo = "default value"] = ["John", "Jack"];
+      // console.log(nameOne);
+      // console.log(nameTwo);
+
       // Smart functions
       //   function num([num1, ...num2]) {
       //     console.log(num1);
       //     console.log(num2);
       //   }
       //   num([1, 2, 3]);
+
+      // Default Values
+      // function add(a, b = 0) {
+      //   console.log(a + b);
+      // }
+      // add(4, 15);
 
       // Object Destructuring
       // Syntax
@@ -148,6 +159,22 @@
       //   console.log(age);
       //   console.log(hobbyOne);
       //   console.log(hobbyTwo);
+
+      // Default values
+      let {
+        name,
+        age,
+        city,
+        state = "TN",
+      } = {
+        name: "John",
+        age: 34,
+        city: "Chennai",
+      };
+      console.log(name);
+      console.log(age);
+      console.log(city);
+      console.log(state);
 
       //   function userDetails({ name: n, ...restProp }) {
       //     console.log(n);
