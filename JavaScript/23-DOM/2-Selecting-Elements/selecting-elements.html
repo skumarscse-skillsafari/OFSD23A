@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Selectors" />
+    <title>DOM - Selectors</title>
+  </head>
+  <body>
+    <h2>DOM Selectors</h2>
+    <p id="para">This is a paragraph</p>
+    <ul id="list">
+      <li class="list-items">Home</li>
+      <li class="list-items">About</li>
+      <li class="list-items">Projects</li>
+      <li class="list-items">Contact</li>
+    </ul>
+    <hr />
+    <form action="#">
+      <p>
+        <label for="subjects">Select Subject</label>
+        <input
+          type="radio"
+          name="subject"
+          id="subject-1"
+          value="English"
+        />English
+        <input type="radio" name="subject" id="subject-2" value="Maths" />Maths
+        <input
+          type="radio"
+          name="subject"
+          id="subject-3"
+          value="Physics"
+        />Physics
+        <input
+          type="radio"
+          name="subject"
+          id="subject-4"
+          value="Chemistry"
+        />Chemistry
+      </p>
+    </form>
+
+    <script>
+      // DOM Selectors
+      // 1. document.getElementById()
+      // 2. document.getElementsByClassName()
+      // 3. document.getElementsByTagName()
+      // 4. document.getElementsByName()
+
+      // 5. document.querySelector()
+      // 6. document.querySelectorAll()
+
+      // document.getElementById()
+      // Syntax
+      // document.getElementById("idName") => return HTML Element
+
+      //   let para = document.getElementById("para");
+      //   console.log(para);
+      //   console.log(para.id);
+      //   console.log(para.textContent);
+
+      // document.getElementsByClassName()
+      // Syntax
+      // document.getElementsByClassName("className") => return array like HTMLCollectionOf<Element>
+      //   let listItems = document.getElementsByClassName("list-items");
+      //   console.log(listItems);
+      //   console.log(listItems[0]);
+      //   console.log(listItems[1]);
+      //   console.log(listItems[2]);
+      //   console.log(listItems[3]);
+      //   for (const list of listItems) {
+      //     console.log(list);
+      //   }
+
+      // Array.from(arrayLikeElements) => return array of elements
+      //   let listArr = Array.from(listItems);
+      //   console.log(listArr);
+      //   let listTextArr = listArr.map((list) => list.textContent);
+      //   console.log(listTextArr);
+
+      // document.getElementsByTagName()
+      // Syntax
+      // document.getElementsByTagName('tagName') => return array like HTMLCollectionOf<Element>
+      //   let liList = document.getElementsByTagName("li");
+      //   console.log(liList);
+
+      // document.getElementsByName()
+      // Syntax
+      // document.getElementsByName("nameAttrValue") => return array like NodeListOf<HTMLElement>
+      //   let subjects = document.getElementsByName("subject");
+      //   console.log(subjects);
+      //   let values = Array.from(subjects).map((subject) => subject.value);
+      //   console.log(values);
+
+      // document.querySelector("cssSelector")
+      //   let head = document.querySelector("#para");
+      //   console.log(head);
+
+      // document.querySelectorAll("cssSelector")
+      //   let listItems = document.querySelectorAll("#list .list-items");
+      //   console.log(listItems);
+    </script>
+  </body>
+</html>
