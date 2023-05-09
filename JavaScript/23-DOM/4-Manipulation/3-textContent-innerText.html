@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="textContent Vs. innerText" />
+    <title>textContent Vs. innerText</title>
+  </head>
+  <body>
+    <h2>textContent Vs. innerText</h2>
+    <ul id="list">
+      <li class="list-items">Home</li>
+      <li class="list-items">About</li>
+      <li class="list-items" style="display: none">Projects</li>
+      <li class="list-items">Awards</li>
+      <li class="list-items">Contact</li>
+    </ul>
+
+    <p id="para"></p>
+
+    <script>
+      // textContent Vs. innerText
+      let para = document.querySelector("#para");
+      //   para.textContent = "This is a paragraph";
+      //   para.innerText = "This is a paragraph";
+
+      let lists = document.querySelector("#list");
+      console.log(lists.textContent);
+
+      console.log(lists.innerText);
+    </script>
+  </body>
+</html>

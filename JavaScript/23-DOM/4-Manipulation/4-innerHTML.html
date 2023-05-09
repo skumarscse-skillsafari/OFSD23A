@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="innerHTML" />
+    <title>innerHTML</title>
+    <style>
+      .bg {
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>innerHTML</h2>
+    <ul id="list"></ul>
+    <div id="demo"></div>
+    <button id="add-list">Add list</button>
+    <button id="add-child">Add child</button>
+    <button id="add-style">Add style</button>
+
+    <script>
+      // innerHTML
+      let list = document.querySelector("#list");
+      let demo = document.querySelector("#demo");
+
+      let addList = document.querySelector("#add-list");
+      let addChild = document.querySelector("#add-child");
+
+      addList.addEventListener("click", () => {
+        let listItems = `
+                <li class="list-items">Home</li>
+                <li class="list-items">About</li>
+                <li class="list-items">Projects</li>
+                <li class="list-items">Contact</li>
+      `;
+        list.innerHTML = listItems;
+      });
+
+      addChild.addEventListener("click", () => {
+        let childEle = `
+                <p id="para">This is a paragraph</p>
+                <a href="#">Click</a>
+                <hr />
+                <h3>Heading Three</h3>
+      `;
+
+        demo.innerHTML = childEle;
+      });
+
+      let addStyle = document.querySelector("#add-style");
+      addStyle.addEventListener("click", () => {
+        list.className = "bg";
+      });
+    </script>
+  </body>
+</html>

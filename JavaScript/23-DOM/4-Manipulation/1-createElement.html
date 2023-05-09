@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="createElement" />
+    <title>createElement</title>
+  </head>
+  <body>
+    <h2>createElement</h2>
+
+    <script>
+      // createElement()
+      // Syntax
+      // document.createElement("tagName")
+      let h2 = document.createElement("h2");
+      //   h2.textContent = "This is a heading";
+      let text = document.createTextNode("This is a heading");
+      h2.appendChild(text);
+      h2.id = "demo";
+      h2.className = "demo-class";
+      console.log(h2);
+      document.body.appendChild(h2);
+    </script>
+  </body>
+</html>

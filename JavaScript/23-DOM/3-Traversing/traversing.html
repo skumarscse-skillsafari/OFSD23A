@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Traversing" />
+    <title>Traversing</title>
+  </head>
+  <body>
+    <h2>Traversing</h2>
+    <ul id="list">
+      <li class="list-items">Home</li>
+      <li class="list-items">About</li>
+      <li class="list-items">Projects</li>
+      <li class="list-items">Awards</li>
+      <li class="list-items">Contact</li>
+    </ul>
+
+    <script>
+      // Traversing
+      // 1. Child to Parent
+      // 2. Parent to Child
+      // 3. Siblings
+
+      // Child to Parent
+      //   let projects = document.querySelectorAll(".list-items")[2];
+      //   console.log(projects);
+
+      //   // parentNode
+      //   console.log(projects.parentNode);
+
+      // Parent to Child
+      //   let list = document.querySelector("#list");
+      //   console.log(list);
+      //   console.log(list.firstElementChild);
+      //   console.log(list.lastElementChild);
+      //   console.log(list.children);
+      //   for (const listEle of list.children) {
+      //     console.log(listEle.textContent);
+      //   }
+
+      // Siblings
+      //   let projects = document.querySelectorAll(".list-items")[2];
+      //   console.log(projects);
+      //   console.log(projects.previousElementSibling);
+      //   console.log(projects.nextElementSibling);
+
+      //   let home = document.querySelector("#list").firstElementChild;
+      //   console.log(home);
+      //   while (home.nextElementSibling) {
+      //     let elements = home.nextElementSibling;
+      //     console.log(elements);
+      //   }
+    </script>
+  </body>
+</html>
