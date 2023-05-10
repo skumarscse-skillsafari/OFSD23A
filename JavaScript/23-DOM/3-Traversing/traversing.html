@@ -46,12 +46,12 @@
       //   console.log(projects.previousElementSibling);
       //   console.log(projects.nextElementSibling);
 
-      //   let home = document.querySelector("#list").firstElementChild;
-      //   console.log(home);
-      //   while (home.nextElementSibling) {
-      //     let elements = home.nextElementSibling;
-      //     console.log(elements);
-      //   }
+      let siblingOne = document.querySelector("#list").firstElementChild;
+      //   console.log(siblingOne);
+      while (siblingOne) {
+        console.log(siblingOne);
+        siblingOne = siblingOne.nextElementSibling;
+      }
     </script>
   </body>
 </html>

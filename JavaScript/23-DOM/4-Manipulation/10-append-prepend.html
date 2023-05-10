@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="append - prepend" />
+    <title>append - prepend</title>
+  </head>
+  <body>
+    <h2>append - prepend</h2>
+
+    <ul id="subjects">
+      <li>English</li>
+      <li>Physics</li>
+      <li>Maths</li>
+    </ul>
+
+    <script>
+      // append - prepend
+      // append() => add node/nodes to the after the last child of the specified element
+      // prepend() => add node/nodes before the first child of the specified element
+      let subArr = ["Chemistry", "Computer"];
+      let subjects = document.querySelector("#subjects");
+      let computer = document.createElement("li");
+      computer.textContent = "Computer";
+      let newSubjects = subArr.map((s) => {
+        let newSub = document.createElement("li");
+        newSub.textContent = s;
+        return newSub;
+      });
+      //   subjects.append(...newSubjects);
+      subjects.prepend(...newSubjects);
+    </script>
+  </body>
+</html>

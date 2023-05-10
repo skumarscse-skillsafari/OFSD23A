@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="before() and after()" />
+    <title>before()</title>
+  </head>
+  <body>
+    <h2>before() and after()</h2>
+    <div id="demo">
+      <p id="para">This is a paragraph</p>
+    </div>
+
+    <script>
+      // before() => Insert one or more nodes before the selected element
+      // after() => Insert one or more nodes after the selected element
+      // Syntax
+      // ele.before(...nodes)
+      // ele.after(...nodes)
+      let para = document.querySelector("#para");
+      //   let newEle = document.createElement("h2");
+      //   newEle.textContent = "Hello";
+      //   para.before(newEle);
+      let list = ["Home", "About", "Projects", "Contact"];
+
+      function addList(list) {
+        // console.log(list);
+        let newElements = list.map((l) => {
+          let newEle = document.createElement("p");
+          newEle.textContent = l;
+          return newEle;
+        });
+        console.log(newElements);
+        return newElements;
+      }
+      console.log(addList(list));
+      para.before(...addList(list));
+      //   para.after(...addList(list));
+    </script>
+  </body>
+</html>

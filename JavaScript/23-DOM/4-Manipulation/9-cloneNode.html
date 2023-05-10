@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="cloneNode" />
+    <title>cloneNode</title>
+  </head>
+  <body>
+    <h2>cloneNode</h2>
+    <ul id="list">
+      <li>Home</li>
+      <li>About</li>
+      <li>Projects</li>
+      <li>Contact</li>
+    </ul>
+
+    <ul id="clone-list"></ul>
+
+    <script>
+      // cloneNode()
+      // Syntax
+      // originalNode.cloneNode(deep)
+      // deep => boolean
+      // true => clone with innerElements
+      // false => default value
+
+      let list = document.querySelector("#list");
+      let cloneList = document.querySelector("#clone-list");
+
+      cloneList.appendChild(list.cloneNode());
+    </script>
+  </body>
+</html>
