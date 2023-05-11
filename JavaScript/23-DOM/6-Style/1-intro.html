@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Style - Object" />
+    <title>Style - Object</title>
+    <style>
+      .list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Style Object</h2>
+    <ul id="list" class="demo hello">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button id="addBtn">Add</button>
+    <button id="removeBtn">Remove</button>
+    <button id="toggleBtn">Toggle</button>
+
+    <script>
+      // Style Object
+      let list = document.querySelector("#list");
+      //   console.log(list.style);
+      //   list.style.display = "flex";
+      //   list.style.justifyContent = "space-around";
+      //   list.style.paddingLeft = 0;
+      //   for (const liEle of list.children) {
+      //     liEle.style.listStyle = "none";
+      //     liEle.firstElementChild.style.textDecoration = "none";
+      //     console.log(liEle);
+      //   }
+
+      // className => return all the classNames as a space separated string
+      //   console.log(list.className.split(" "));
+
+      // classList
+      // add()
+      // remove()
+      // contains()
+      // replace()
+      // toggle()
+
+      console.log(list.classList);
+      let addBtn = document.querySelector("#addBtn");
+      let removeBtn = document.querySelector("#removeBtn");
+      let toggleBtn = document.querySelector("#toggleBtn");
+
+      addBtn.addEventListener("click", () => {
+        list.classList.add("list");
+      });
+
+      removeBtn.addEventListener("click", () => {
+        list.classList.remove("list");
+      });
+
+      toggleBtn.addEventListener("click", () => {
+        list.classList.toggle("list");
+      });
+
+      console.log(list.classList.contains("list")); // false
+
+      list.classList.replace("demo", "new-demo");
+    </script>
+  </body>
+</html>

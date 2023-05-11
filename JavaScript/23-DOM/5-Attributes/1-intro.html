@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Attributes" />
+    <title>DOM - Attributes</title>
+  </head>
+  <body>
+    <h2>DOM - Attributes</h2>
+    <p id="para">This is a paragraph</p>
+    <button id="btn">Button</button>
+
+    <script>
+      document.querySelector("#btn").setAttribute("disabled", "");
+      // DOM - Attributes
+      // 1. setAttribute()
+      // 2. getAttribute()
+      // 3. removeAttribute()
+      // 4. hasAttribute()
+
+      // setAttribute()
+      // Syntax
+      // ele.setAttribute("key", "value")
+      let para = document.querySelector("#para");
+      para.setAttribute("class", "demo");
+      console.log(para);
+
+      // getAttribute("key")
+      console.log(para.getAttribute("id")); //  para
+
+      // removeAttribute("key")
+      para.removeAttribute("id");
+
+      // hasAttribute("key")
+      console.log(para.hasAttribute("class")); // true
+    </script>
+  </body>
+</html>
