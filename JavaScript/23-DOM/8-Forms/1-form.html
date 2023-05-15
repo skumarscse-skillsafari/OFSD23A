@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Forms" />
+    <title>Forms</title>
+    <style>
+      .success {
+        color: green;
+      }
+
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Forms</h2>
+    <form action="#" id="form">
+      <p>
+        <input
+          type="text"
+          name="fullname"
+          id="username"
+          placeholder="Enter username"
+        />
+        <small></small>
+      </p>
+      <p>
+        <input type="email" name="email" id="email" placeholder="Enter email" />
+        <small></small>
+      </p>
+      <p>
+        <textarea
+          name="message"
+          id="message"
+          cols="21"
+          rows="5"
+          placeholder="Enter message"
+        ></textarea>
+        <small></small>
+      </p>
+
+      <p>
+        <button id="submitBtn">Submit</button>
+        <button id="clrBtn">Clear</button>
+      </p>
+    </form>
+
+    <script>
+      // Forms
+      // Selecting HTML forms
+      // document.forms => return all the forms in the document as array
+      //   console.log(document.forms[0][0]);
+
+      let form = document.querySelector("#form");
+      //   console.log(form.elements[0]);
+      //   console.log(form.elements["username"]);
+      //   console.log(form.elements["fullname"]);
+
+      // Access input element values
+      // value
+      let username = document.forms[0][0];
+      //   username.value = "John";
+      //   console.log(username.value);
+      let email = document.forms[0][1];
+      let message = document.forms[0][2];
+
+      let submitBtn = document.forms[0][3];
+      let clearBtn = document.forms[0][4];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // console.log(username.value);
+        // console.log(email.value);
+        // console.log(message.value);
+        for (const ele of document.forms[0]) {
+          //   console.log(ele.value);
+          if (ele.value) {
+            let smallEle = ele.nextElementSibling;
+            if (smallEle.tagName === "SMALL") {
+              smallEle.className = "success";
+              smallEle.textContent = "Success";
+            }
+          } else {
+            let smallEle = ele.nextElementSibling;
+            console.log(smallEle);
+            if (smallEle?.tagName === "SMALL") {
+              smallEle.className = "error";
+              smallEle.textContent = "Error";
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
