@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Radio Button" />
+    <title>Radio Button</title>
+  </head>
+  <body>
+    <h2>Radio Button</h2>
+    <form action="#">
+      <p>Select anyone:</p>
+      <label for="english">
+        <input
+          type="radio"
+          name="subjects"
+          id="english"
+          value="English"
+        />English
+      </label>
+      <label for="maths">
+        <input type="radio" name="subjects" id="maths" value="Maths" />Maths
+      </label>
+      <label for="physics">
+        <input
+          type="radio"
+          name="subjects"
+          id="physics"
+          value="Physics"
+        />Physics
+      </label>
+      <label for="chemistry">
+        <input
+          type="radio"
+          name="subjects"
+          id="chemistry"
+          value="Chemistry"
+        />Chemistry
+      </label>
+      <p>
+        <button id="btn">Submit</button>
+      </p>
+    </form>
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      // Radio button
+      let radioBtns = document.querySelectorAll("[type='radio']");
+      console.log(radioBtns);
+      let para = document.querySelector("#result");
+      let btn = document.querySelector("#btn");
+      let selectedOption;
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        for (const radioBtn of radioBtns) {
+          if (radioBtn.checked) {
+            selectedOption = radioBtn.value;
+          }
+        }
+        para.innerText = selectedOption
+          ? `You selected: ${selectedOption}`
+          : "You not selected any option";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Check Box" />
+    <title>Check Box</title>
+  </head>
+  <body>
+    <h2>Check Box</h2>
+    <form action="#">
+      <p>Select any option(s)</p>
+      <label for="english">
+        <input
+          type="checkbox"
+          name="english"
+          id="english"
+          value="English"
+        />English
+      </label>
+      <label for="maths">
+        <input type="checkbox" name="maths" id="maths" value="Maths" />Maths
+      </label>
+      <label for="physics">
+        <input
+          type="checkbox"
+          name="physics"
+          id="physics"
+          value="Physics"
+        />Physics
+      </label>
+      <label for="chemistry">
+        <input
+          type="checkbox"
+          name="chemistry"
+          id="chemistry"
+          value="Chemistry"
+        />Chemistry
+      </label>
+      <p>
+        <button id="btn">Click</button>
+      </p>
+    </form>
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      // Check Box
+
+      let btn = document.querySelector("#btn");
+      let result = document.querySelector("#result");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let checkBtns = document.querySelectorAll("[type='checkbox']:checked");
+        let checkBtnArr = Array.from(checkBtns).map((c) => c.value);
+        console.log(checkBtnArr);
+        result.innerText =
+          checkBtnArr.length != 0
+            ? `You selected: ${checkBtnArr.join(", ")}`
+            : "You not selected any options";
+      });
+    </script>
+  </body>
+</html>
