@@ -50,16 +50,21 @@
 
       let btn = document.querySelector("#btn");
       let result = document.querySelector("#result");
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        let checkBtns = document.querySelectorAll("[type='checkbox']:checked");
-        let checkBtnArr = Array.from(checkBtns).map((c) => c.value);
-        console.log(checkBtnArr);
-        result.innerText =
-          checkBtnArr.length != 0
-            ? `You selected: ${checkBtnArr.join(", ")}`
-            : "You not selected any options";
-      });
+      let allOptions = document.querySelectorAll("[type='checkbox']");
+      for (const allOption of allOptions) {
+        allOption.addEventListener("change", (e) => {
+          e.preventDefault();
+          let checkBtns = document.querySelectorAll(
+            "[type='checkbox']:checked"
+          );
+          let checkBtnArr = Array.from(checkBtns).map((c) => c.value);
+          console.log(checkBtnArr);
+          result.innerText =
+            checkBtnArr.length != 0
+              ? `You selected: ${checkBtnArr.join(", ")}`
+              : "You not selected any options";
+        });
+      }
     </script>
   </body>
 </html>
