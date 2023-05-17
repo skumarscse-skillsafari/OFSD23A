@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Select" />
+    <title>Select</title>
+  </head>
+  <body>
+    <h2>Select</h2>
+    <form action="#">
+      <p>Select option(s)</p>
+      <select name="subjects" id="subjects" multiple>
+        <option value="English">English</option>
+        <option value="Maths">Maths</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Computer">Computer</option>
+      </select>
+      <p>
+        <button id="btn">Click</button>
+      </p>
+    </form>
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      // Select
+      let btn = document.querySelector("#btn");
+      let selectedOptions = [];
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let optionsEle = document.querySelector("#subjects");
+        console.log(optionsEle.options);
+        for (const optionVal of optionsEle.options) {
+          if (optionVal.selected) {
+            selectedOptions.push(optionVal.value);
+          }
+        }
+        console.log(selectedOptions);
+        document.querySelector("#result").textContent =
+          selectedOptions.length != 0
+            ? `User selected options: ${selectedOptions.join(", ")}`
+            : "User not selected any option";
+        selectedOptions = [];
+      });
+    </script>
+  </body>
+</html>
