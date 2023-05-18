@@ -38,6 +38,12 @@
       let signinBtn = document.querySelector("#signin");
       signinBtn.addEventListener("click", (e) => {
         e.preventDefault();
+        let allUsers = Object.entries(localStorage);
+        console.log(allUsers);
+        let user = allUsers.find((u) => JSON.parse(u[1]).email === email.value);
+        console.log(user);
+        sessionStorage.setItem(user[0], user[1]);
+        window.location.href = "./profile.html";
       });
     </script>
   </body>

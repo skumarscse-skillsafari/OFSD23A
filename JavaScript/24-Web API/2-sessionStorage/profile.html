@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Profile Page" />
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <h2>Welcome, <span id="username"></span></h2>
+    <p>
+      <input type="button" value="Logout" id="logout" />
+    </p>
+    <hr />
+    <h3>Your Details:</h3>
+    <p id="displayname"></p>
+    <p id="email"></p>
+    <p id="password"></p>
+
+    <script>
+      // Profile page
+      let userDetails = sessionStorage;
+      console.log(userDetails);
+      let username = document.querySelector("#username");
+      let displayname = document.querySelector("#displayname");
+      let email = document.querySelector("#email");
+      let password = document.querySelector("#password");
+      let key = sessionStorage.key(1);
+      console.log(key);
+      let details = JSON.parse(sessionStorage.getItem(key));
+      console.log(details);
+      username.textContent = details.username;
+      displayname.textContent = details.username;
+      email.textContent = details.email;
+      password.textContent = details.password;
+      let logout = document.querySelector("#logout");
+
+      logout.addEventListener("click", () => {
+        sessionStorage.removeItem(key);
+        alert("User loggedout successfully");
+        window.location.href = "./register.html";
+      });
+    </script>
+  </body>
+</html>
