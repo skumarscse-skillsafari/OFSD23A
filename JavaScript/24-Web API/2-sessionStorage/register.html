@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Registration Page" />
+    <title>Registration Page</title>
+  </head>
+  <body>
+    <h2>Registration Page</h2>
+    <form action="#" id="register-form">
+      <p>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter username"
+        />
+      </p>
+      <p>
+        <input type="email" name="email" id="email" placeholder="Enter email" />
+      </p>
+      <p>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter password"
+        />
+      </p>
+      <p>
+        Already registered? <a href="./login.html">Click here to Sign-In</a>
+      </p>
+      <p>
+        <input type="submit" value="Register" id="register" />
+        <input type="reset" value="Clear" id="clear" />
+      </p>
+    </form>
+
+    <script>
+      let formFields = document.querySelector("#register-form");
+      let username = formFields.elements[0];
+      let email = formFields.elements[1];
+      let password = formFields.elements[2];
+
+      let registerBtn = document.querySelector("#register");
+      registerBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let userObj = {
+          id: Math.floor(Math.random() * 1000),
+          username: username.value,
+          email: email.value,
+          password: password.value,
+        };
+        console.log(userObj);
+        localStorage.setItem(userObj.id, JSON.stringify(userObj));
+        alert("User created successfully");
+        window.location.href = "./login.html";
+      });
+    </script>
+  </body>
+</html>

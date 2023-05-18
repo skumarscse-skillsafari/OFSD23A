@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Web API - Intro" />
+    <title>Web API - Intro</title>
+  </head>
+  <body>
+    <h2>Web API - Intro</h2>
+
+    <script>
+      // Web API - Intro
+      // 1. localStorage
+      // 2. sessionStorage
+      // 3. Geolocation API
+      // 4. fetch API
+
+      // localStorage
+      // Accessing localStorage
+      // window.localStorage
+      // localStorage
+      //   console.log(window.localStorage);
+      //   console.log(localStorage);
+
+      // Methods and Properties
+      // 1. setItem("key", "value");
+      // 2. getItem("key");
+      // 3. removeItem("key")
+      // 4. clear()
+      // 5. length
+
+      // Adding data
+      //   localStorage.setItem("username", "John");
+      //   localStorage.setItem("age", 25);
+      //   localStorage.setItem("city", "Chennai");
+
+      // Access value
+      //   console.log(localStorage.getItem("username"));
+      //   console.log(localStorage.getItem("state"));
+
+      // Remove data
+      //   localStorage.removeItem("city");
+
+      // Remove all the data
+      //   localStorage.clear();
+
+      //   console.log(localStorage.key(0));
+
+      // Storing object
+      let john = {
+        name: "John",
+        age: 25,
+        city: "Chennai",
+      };
+      localStorage.setItem("John", JSON.stringify(john));
+      console.log(localStorage);
+
+      let value = localStorage.getItem("John");
+      console.log(value);
+      console.log(JSON.parse(value));
+    </script>
+  </body>
+</html>

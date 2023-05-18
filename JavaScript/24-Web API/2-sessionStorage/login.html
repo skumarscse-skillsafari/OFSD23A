@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Login Page" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <h2>Login Page</h2>
+    <form action="#" id="signin-form">
+      <p>
+        <input type="email" name="email" id="email" placeholder="Enter email" />
+      </p>
+      <p>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter password"
+        />
+      </p>
+      <p>
+        Not yet registered? <a href="./register.html">Click here to Register</a>
+      </p>
+      <p>
+        <input type="submit" value="Submit" id="signin" />
+        <input type="reset" value="Clear" id="clear" />
+      </p>
+    </form>
+
+    <script>
+      let formFields = document.querySelector("#signin-form");
+      let email = formFields.elements[0];
+      let password = formFields.elements[1];
+
+      let signinBtn = document.querySelector("#signin");
+      signinBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>
