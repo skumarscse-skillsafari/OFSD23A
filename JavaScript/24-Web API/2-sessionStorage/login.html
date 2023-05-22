@@ -42,8 +42,10 @@
         console.log(allUsers);
         let user = allUsers.find((u) => JSON.parse(u[1]).email === email.value);
         console.log(user);
+        let userObj = JSON.parse(user[1]);
+        console.log(userObj);
         sessionStorage.setItem(user[0], user[1]);
-        window.location.href = "./profile.html";
+        window.location.href = `./profile.html?id=${userObj.id}`;
       });
     </script>
   </body>

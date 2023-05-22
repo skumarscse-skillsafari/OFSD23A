@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Fetch API" />
+    <title>Fetch API</title>
+  </head>
+  <body>
+    <h2>Fetch API</h2>
+    <input
+      type="text"
+      name="search"
+      id="search"
+      placeholder="Search products..."
+    />
+    <input type="button" value="Search" id="btn" />
+    <hr />
+    <div id="products"></div>
+
+    <script>
+      // Fetch API
+      // JS => Single threaded, synchronous programming
+      // Async
+      // 1. CallBacks
+      // 2. Promises
+      // 3. Async/Await
+
+      // Syntax
+      // fetch("url")
+      let newProducts = [];
+      let productsDiv = document.querySelector("#products");
+      async function fetchData(url) {
+        try {
+          let res = await fetch(url);
+          console.log(res);
+          let products = await res.json();
+          console.log(products);
+          newProducts = [...products];
+
+          let productsArr = products.map((product) => {
+            return `
+                <div id=product-${product.id}>
+                    <p><strong>Title: </strong>${product.title}</p>
+                    <p><strong>Description: </strong>${product.description}</p>
+                    <p><strong>Category: </strong>${product.category}</p>
+                    <img src=${product.image} alt=product-${product.id} height="100px" width="100px"/>
+                    <p><strong>Price: </strong>${product.price}</p>
+                    <p><strong>Rating: </strong>${product.rating.rate}</p>
+                    <p><strong>Count: </strong>${product.rating.count}</p>
+                    <hr />
+                </div>
+                `;
+          });
+          //   console.log(productsArr.join(" "));
+          productsDiv.innerHTML = productsArr.join(" ");
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      let btn = document.querySelector("#btn");
+      let searchStr = document.querySelector("#search");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let filteredProducts = newProducts.filter((product) =>
+          product.title.includes(searchStr.value)
+        );
+        let productsArr = filteredProducts.map((product) => {
+          return `
+                <div id=product-${product.id}>
+                    <p><strong>Title: </strong>${product.title}</p>
+                    <p><strong>Description: </strong>${product.description}</p>
+                    <p><strong>Category: </strong>${product.category}</p>
+                    <img src=${product.image} alt=product-${product.id} height="100px" width="100px"/>
+                    <p><strong>Price: </strong>${product.price}</p>
+                    <p><strong>Rating: </strong>${product.rating.rate}</p>
+                    <p><strong>Count: </strong>${product.rating.count}</p>
+                    <hr />
+                </div>
+                `;
+        });
+        productsDiv.innerHTML = productsArr;
+      });
+
+      fetchData("https://fakestoreapi.com/products");
+    </script>
+  </body>
+</html>

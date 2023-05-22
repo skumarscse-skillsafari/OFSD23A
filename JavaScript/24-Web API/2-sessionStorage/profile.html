@@ -37,7 +37,11 @@
       let logout = document.querySelector("#logout");
 
       logout.addEventListener("click", () => {
-        sessionStorage.removeItem(key);
+        let idUrl = new URLSearchParams(location.search);
+        console.log(idUrl.values());
+        const [id] = idUrl.values();
+        console.log(id);
+        sessionStorage.removeItem(id);
         alert("User loggedout successfully");
         window.location.href = "./register.html";
       });
