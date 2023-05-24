@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Fetch API Key" />
+    <title>Fetch API Key</title>
+  </head>
+  <body>
+    <h2>Fetch API Key</h2>
+    <form action="#">
+      <p>
+        <input
+          type="text"
+          name="city"
+          id="city"
+          placeholder="Enter City name"
+        />
+      </p>
+      <p>
+        <input type="submit" value="Search" id="search" />
+        <input type="reset" value="Clear" />
+      </p>
+    </form>
+
+    <script>
+      // Fetch API Key
+
+      let btn = document.querySelector("#search");
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let city = document.querySelector("#city").value;
+        console.log(city);
+        fetchWeather(
+          `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(
+            city
+          )}&APPID=9701e05bdc450703a5af1448835dd149`
+        );
+      });
+
+      const fetchWeather = async (url) => {
+        try {
+          let req = await fetch(url);
+          console.log(req);
+          let res = await req.json();
+          console.log(res);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    </script>
+  </body>
+</html>

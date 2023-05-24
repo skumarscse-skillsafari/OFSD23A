@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Desctiption" content="Fetch API - POST data" />
+    <title>Fetch API - POST Data</title>
+  </head>
+  <body>
+    <h2>Fetch API - POST Data</h2>
+    <form action="#" id="form">
+      <p>
+        <input type="text" name="title" id="title" placeholder="Enter title" />
+      </p>
+      <p>
+        <textarea
+          name="description"
+          id="description"
+          cols="21"
+          rows="5"
+          placeholder="Enter description"
+        ></textarea>
+      </p>
+
+      <p>
+        <input type="submit" value="Submit" id="submit-btn" />
+        <input type="reset" value="Clear" id="clear-btn" />
+      </p>
+    </form>
+
+    <script>
+      // FETCH API - POST Data
+      /*
+        fetch(a, b)
+        a => URL
+        b => form options object (optional)
+
+        POST
+        fetch(url, formOptions)
+        Ex:
+        fetch("http://www.flipkart.com", {
+            method: "POST",
+            body: new FormData(form)
+        })
+
+        GET
+        fetch(url) + id
+        Ex: fetch("http://www.flipkart.com")
+
+        PATCH
+        fetch(url, formOptions) + id
+        Ex:
+        fetch("http://www.flipkart.com", {
+            method: "PATCH/PUT",
+            body: new FormData(form)
+        })
+
+        DELETE
+        fetch(url) + id
+        Ex: fetch("http://www.flipkart.com")
+        
+        */
+
+      let form = document.querySelector("#form");
+      let btn = document.querySelector("#submit-btn");
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        postData("https://jsonplaceholder.typicode.com/posts");
+      });
+
+      const postData = async (url) => {
+        let req = await fetch(url, {
+          method: "POST",
+          body: new FormData(form),
+        });
+        console.log(req);
+
+        let res = await req.json();
+        console.log(res);
+      };
+    </script>
+  </body>
+</html>
