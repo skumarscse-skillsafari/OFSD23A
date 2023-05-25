@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Signin" />
+    <title>Signin</title>
+  </head>
+  <body>
+    <h2>Signin Form</h2>
+    <form action="#">
+      <p>
+        <input type="email" name="email" id="email" placeholder="Enter email" />
+      </p>
+      <p>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter password"
+        />
+      </p>
+      <p>
+        <input type="submit" value="Signin" id="signin-btn" />
+        <input type="reset" value="Clear" />
+      </p>
+    </form>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+      import {
+        getDatabase,
+        ref,
+        set,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCe_o8n0HUayViAAFdFofwNNYhM3BPiBMk",
+        authDomain: "ofsd23a.firebaseapp.com",
+        projectId: "ofsd23a",
+        storageBucket: "ofsd23a.appspot.com",
+        messagingSenderId: "886872621368",
+        appId: "1:886872621368:web:dba7a9e1a7a4871c73c1cd",
+        measurementId: "G-VQ1STDBVPL",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      const database = getDatabase();
+
+      let signinBtn = document.querySelector("#signin-btn");
+
+      signinBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let email = document.querySelector("#email").value;
+        let password = document.querySelector("#password").value;
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userDetails) => {
+            alert("User signed-in successfully");
+            setTimeout(() => {
+              window.location.href = `./profile.html?id=${userDetails.user.uid}`;
+            }, 2000);
+          })
+          .catch((err) => console.log(err));
+      });
+    </script>
+  </body>
+</html>

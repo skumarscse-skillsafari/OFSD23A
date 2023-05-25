@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Promise" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <h2>Promise</h2>
+
+    <script>
+      // Promise
+      /*
+        Async => 
+        1. Pending (initial)
+        2. Fulfilled (success) => then()
+        3. Rejected (failure) => catch()
+
+        promiseFun().then(()=> {}).catch((err) => {})
+        */
+
+      fetch("https://fakestoreapi.com/products")
+        .then((res) => res.json())
+        .then((products) => console.log(products))
+        .catch((err) => console.log(err));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Register Form" />
+    <title>Register Form</title>
+  </head>
+  <body>
+    <h2>Register Form</h2>
+    <form action="#">
+      <p>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter username"
+        />
+      </p>
+      <p>
+        <input type="email" name="email" id="email" placeholder="Enter email" />
+      </p>
+      <p>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter password"
+        />
+      </p>
+      <p>
+        <input type="submit" value="Submit" id="submit-btn" />
+        <input type="reset" value="Clear" id="clear-btn" />
+      </p>
+    </form>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+      import {
+        getDatabase,
+        ref,
+        set,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCe_o8n0HUayViAAFdFofwNNYhM3BPiBMk",
+        authDomain: "ofsd23a.firebaseapp.com",
+        projectId: "ofsd23a",
+        storageBucket: "ofsd23a.appspot.com",
+        messagingSenderId: "886872621368",
+        appId: "1:886872621368:web:dba7a9e1a7a4871c73c1cd",
+        measurementId: "G-VQ1STDBVPL",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      const database = getDatabase();
+
+      let submit = document.querySelector("#submit-btn");
+
+      submit.addEventListener("click", (e) => {
+        e.preventDefault();
+        let username = document.querySelector("#username").value;
+        let email = document.querySelector("#email").value;
+        let password = document.querySelector("#password").value;
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredentials) => {
+            const userId = userCredentials.user.uid;
+            console.log(userId);
+            set(ref(database, "usersCollection/" + userId), {
+              userID: userId,
+              username: username,
+              email: email,
+            });
+            alert("User created successfully");
+            setTimeout(() => {
+              window.location.href = "./signin.html";
+            }, 2000);
+          })
+          .catch((err) => console.log(err));
+      });
+    </script>
+  </body>
+</html>
