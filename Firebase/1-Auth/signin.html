@@ -29,53 +29,46 @@
 
     <script type="module">
       // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
       import {
         getAuth,
         signInWithEmailAndPassword,
-      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
-      import {
-        getDatabase,
-        ref,
-        set,
-      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
+      } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 
       // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       const firebaseConfig = {
-        apiKey: "AIzaSyCe_o8n0HUayViAAFdFofwNNYhM3BPiBMk",
-        authDomain: "ofsd23a.firebaseapp.com",
-        projectId: "ofsd23a",
-        storageBucket: "ofsd23a.appspot.com",
-        messagingSenderId: "886872621368",
-        appId: "1:886872621368:web:dba7a9e1a7a4871c73c1cd",
-        measurementId: "G-VQ1STDBVPL",
+        apiKey: "AIzaSyAE0zrh4eTfnAAD9q-VV2I6kAg6PBKQCi4",
+        authDomain: "fsd23a-d3da2.firebaseapp.com",
+        projectId: "fsd23a-d3da2",
+        storageBucket: "fsd23a-d3da2.appspot.com",
+        messagingSenderId: "1026816591187",
+        appId: "1:1026816591187:web:e4e274729352ec28384da6",
       };
 
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
 
-      const database = getDatabase();
+      let auth = getAuth();
 
-      let signinBtn = document.querySelector("#signin-btn");
+      let submit = document.querySelector("#signin-btn");
 
-      signinBtn.addEventListener("click", (e) => {
+      submit.addEventListener("click", (e) => {
         e.preventDefault();
         let email = document.querySelector("#email").value;
         let password = document.querySelector("#password").value;
-        const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
-          .then((userDetails) => {
-            alert("User signed-in successfully");
+          .then((userDetail) => {
+            console.log(userDetail);
+            const uid = userDetail.user.uid;
+            console.log(uid);
+            alert("User logged in successfully");
             setTimeout(() => {
-              window.location.href = `./profile.html?id=${userDetails.user.uid}`;
+              window.location.href = `./profile.html?id=${uid}`;
             }, 2000);
           })
-          .catch((err) => console.log(err));
+          .catch((error) => {
+            console.log(error);
+          });
       });
     </script>
   </body>
