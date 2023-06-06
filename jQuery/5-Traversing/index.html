@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - Traversing" />
+    <title>jQuery - Traversing</title>
+  </head>
+  <body>
+    <h2>jQuery - Traversing</h2>
+    <ul id="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li id="special"><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="container">
+      <p>Paragraph - 1</p>
+      <p>Paragraph - 2</p>
+      <p>Paragraph - 3</p>
+      <h2>Heading - 1</h2>
+      <h2>Heading - 2</h2>
+      <h2>Heading - 3</h2>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $("document").ready(function () {
+        // 1. children()
+        // 2. each()
+        // 3. find()
+        // 4. first()
+        // 5. next()
+        // 6. parent()
+        // 7. prev()
+        // 8. siblings()
+        // console.log($("li"));
+        // $("li").each(function (i) {
+        //   console.log(`Index: ${i} => Element: ${$(this).html()}`);
+        // });
+        // console.log($("#menu").children());
+        // $("#menu")
+        //   .children()
+        //   .each(function () {
+        //     console.log($(this).html());
+        //   });
+        // console.log($(".container").find("p"));
+        // $(".container")
+        //   .find("p")
+        //   .each(function () {
+        //     console.log($(this).text());
+        //   });
+        // console.log($("#menu").find("#special"));
+        // console.log($("#special").next().text());
+        // console.log($("#special").prev().text());
+        // console.log($("#special").parent());
+        // console.log($("#special").siblings());
+        // $("#special")
+        //   .siblings()
+        //   .each(function () {
+        //     console.log($(this).text());
+        //   });
+        // console.log($("#menu").children().first());
+        // console.log($("#menu").children().last());
+      });
+    </script>
+  </body>
+</html>

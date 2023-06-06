@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - Attributes" />
+    <title>jQuery - Attributes</title>
+  </head>
+  <body>
+    <h2>jQuery - Attributes</h2>
+    <h3 class="green">This is heading three</h3>
+    <p style="color: green; font-size: 24px; text-decoration: underline">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+      odio.
+    </p>
+
+    <div class="container">
+      <h2>Heading Two</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, aut.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+        voluptate!
+      </p>
+    </div>
+
+    <input type="text" name="username" id="username" value="John" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $("document").ready(function () {
+        // 1. attr() => set or get the attribute of the selected element
+        // 2. prop() => set or get the specified attribute property of the selected element
+        // 3. html() => set or get the html contents to the selected element
+        // 4. text() => set or get the textContent to the selected element
+        // 5. val() => set or get the value attribute in the selected element
+        // console.log($("h3").attr("class"));
+        // $("h3").attr("id", "new-id");
+        // console.log($("p").attr("style"));
+        // let style = $("p").prop("style");
+        // console.log(style);
+        // console.log(style.color);
+        // console.log(style.fontSize);
+        // console.log(style.textDecoration);
+        // console.log($(".container").html());
+        // $(".container").html(`
+        //                     <h3>New Heading</h3>
+        //                     <p>New Paragraph</p>
+        //                     `);
+        // console.log($("p").text());
+        // $("p").text("This is inserted by using text method");
+
+        console.log($("#username").val());
+
+        $("#username").val("Jack");
+      });
+    </script>
+  </body>
+</html>
