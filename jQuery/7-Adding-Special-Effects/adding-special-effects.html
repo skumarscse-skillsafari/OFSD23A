@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - Adding special effects" />
+    <title>jQuery - Adding special effects</title>
+    <style>
+      .box {
+        background: green;
+        height: 200px;
+        width: 200px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>jQuery - Adding special effects</h2>
+
+    <div class="container box"></div>
+    <hr />
+    <button id="btn">Click</button>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // jQuery - Adding special effects
+      // 1. animate()
+      // 2. fadeIn()
+      // 3. fadeOut()
+      // 4. hide()
+      // 5. show()
+      // 6. slideUp()
+      // 7. slideDown()
+      // 8. toggle()
+      // 9. slideToggle()
+
+      $("document").ready(function () {
+        // $(".container").animate(
+        //   {
+        //     height: "50px",
+        //     width: "50px",
+        //   },
+        //   3000,
+        //   function () {
+        //     alert("Animation Completed");
+        //   }
+        // );
+        // $(".container").fadeIn(5000, function () {
+        //   alert("FadeIn completed");
+        // });
+        // $(".container").fadeOut(5000, function () {
+        //   alert("FadeIn completed");
+        // });
+        // $("#btn").click(function () {
+        //   //   $(".container").hide(5000, function () {
+        //   //     alert("Element hidden");
+        //   //   });
+        //   //   $(".container").show(5000, function () {
+        //   //     alert("Element visible");
+        //   //   });
+        //   $(".container").toggle(5000, function () {
+        //     alert("Element show and hidden");
+        //   });
+        // });
+      });
+    </script>
+  </body>
+</html>

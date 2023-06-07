@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - Handling Styles" />
+    <title>jQuery - Handling Styles</title>
+    <style>
+      .border {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>jQuery - Handling Styles</h2>
+    <div class="container">
+      <h2>Heading Two</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque,
+        debitis.
+      </p>
+    </div>
+    <hr />
+    <button id="btn">Click</button>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // jQuery - Handling Styles
+      $("document").ready(function () {
+        // 1. css()
+        // 2. addClass()
+        // 3. hasClass()
+        // 4. removeClass()
+        // 5. toggleClass()
+        // $(".container").css("background", "green");
+        // $(".container").css({
+        //   padding: "20px",
+        //   "text-decoration": "underline",
+        //   color: "white",
+        // });
+        // console.log($(".container").css("padding"));
+        // $("h2, p").addClass("border");
+        // $(".container").addClass("border");
+        // $("#btn").click(function () {
+        //   $(".container").toggleClass("border");
+        // });
+        // console.log($("div").hasClass("container"));
+        // $("div").removeClass("container");
+      });
+    </script>
+  </body>
+</html>
