@@ -1,0 +1,14 @@
+.App {
+  margin-left: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image {
+  height: 200px;
+  width: 200px;
+}
