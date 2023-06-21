@@ -9,22 +9,24 @@ import Contact from "./Compontents/Contact";
 import Home from "./Compontents/Home";
 import Error from "./Compontents/Error";
 import SingleProduct from "./Compontents/SingleProduct";
+import Users from "./Compontents/Wrapper-Component/Users";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      {/* <Router>
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:productID" element={<SingleProduct />} />
+          <Route path="/products/:productID" element={<SingleProduct />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Routes>
-      </Router>
+      </Router> */}
+      <Users />
     </div>
   );
 }

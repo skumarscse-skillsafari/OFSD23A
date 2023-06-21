@@ -24,7 +24,7 @@ const Home = () => {
             />
           </p>
           <p>Product Price: {product.price}</p>
-          <Link to={`/${product.id}`}>More info...</Link>
+          <Link to={`/products/${product.id}`}>More info...</Link>
           <hr />
         </div>
       ))}
