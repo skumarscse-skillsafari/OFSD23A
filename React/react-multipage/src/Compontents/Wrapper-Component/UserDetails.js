@@ -1,9 +1,12 @@
 import SingleUser from "./SingleUser";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const UserDetails = ({ otherProps, id, users }) => {
   //   console.log(otherProps);
   //   console.log(id);
-  //   console.log(users);
+  // console.log(users);
+  const [display, setDisplay] = useState(false);
   const {
     phone,
     website,
@@ -22,7 +25,7 @@ const UserDetails = ({ otherProps, id, users }) => {
       <p>Phone Number: {phone}</p>
       <p>Website: {website}</p>
       <p>Company name: {name}</p>
-      <SingleUser id={id} users={users} />
+      <Link to={`/users/${id}`}>More info...</Link>
       <hr />
     </div>
   );
