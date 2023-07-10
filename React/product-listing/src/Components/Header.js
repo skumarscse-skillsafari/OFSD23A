@@ -2,7 +2,8 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 import Badge from "react-bootstrap/Badge";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CartState } from "../Context/Context";
@@ -25,20 +26,18 @@ const Header = () => {
           />
           <Button variant="outline-success">Search</Button>
         </Form>
-        <NavDropdown
+        <DropdownButton
+          drop="start"
+          variant="primary"
           title={
             <>
-              <Button variant="primary">
-                <AiOutlineShoppingCart />{" "}
-                <Badge bg="secondary">{cart.length}</Badge>
-                <span className="visually-hidden">unread messages</span>
-              </Button>
+              <AiOutlineShoppingCart />
+              <Badge>{cart.length}</Badge>
             </>
           }
-          id="navbarScrollingDropdown"
         >
-          <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-        </NavDropdown>
+          <Dropdown.Item>Action</Dropdown.Item>
+        </DropdownButton>
       </Container>
     </Navbar>
   );
