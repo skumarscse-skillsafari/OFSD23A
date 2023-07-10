@@ -1,4 +1,5 @@
 import { CartState } from "../Context/Context";
+import Cart from "./Cart";
 const Product = ({ product }) => {
   console.log(CartState());
   //   console.log(product);
@@ -13,6 +14,7 @@ const Product = ({ product }) => {
       <p>
         <img src={image} alt={title} height={100} width={100} />
       </p>
+      <Cart />
       <hr />
     </div>
   );
