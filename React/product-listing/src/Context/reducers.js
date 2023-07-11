@@ -1,7 +1,10 @@
 export const cartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
-      break;
+      return {
+        ...state,
+        cart: [...state.cart, action.payload],
+      };
     case "REMOVE_FROM_CART":
       break;
     case "CHANGE_CART_QTY":

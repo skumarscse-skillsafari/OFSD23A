@@ -4,8 +4,11 @@ import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { AiOutlineShoppingCart, AiFillDelete } from "react-icons/ai";
 import { CartState } from "../Context/Context";
 
 const Header = () => {
@@ -14,9 +17,11 @@ const Header = () => {
     state: { cart },
   } = CartState();
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar bg="success" className="px-5">
       <Container fluid>
-        <Navbar.Brand href="#">Products Listing</Navbar.Brand>
+        <Navbar.Brand href="#" style={{ color: "white" }}>
+          Products Listing
+        </Navbar.Brand>
         <Form className="d-flex">
           <Form.Control
             type="search"
@@ -36,7 +41,29 @@ const Header = () => {
             </>
           }
         >
-          <Dropdown.Item>Action</Dropdown.Item>
+          <Dropdown.Item style={{ width: 500 }}>
+            {cart.map((c) => (
+              <Card>
+                <Card.Body>
+                  <Row>
+                    <Col>
+                      <img src={c.image} alt={c.name} height={75} width={75} />
+                    </Col>
+                    <Col>
+                      <div>{c.name}</div>
+                      <div>{c.price}</div>
+                    </Col>
+                    <Col>
+                      <AiFillDelete />
+                    </Col>
+                  </Row>
+                </Card.Body>
+              </Card>
+            ))}
+            <Row>
+              <button className="btn btn-primary">Clear Cart</button>
+            </Row>
+          </Dropdown.Item>
         </DropdownButton>
       </Container>
     </Navbar>

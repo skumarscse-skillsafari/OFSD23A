@@ -1,11 +1,13 @@
-import "./App.css";
+import Container from "react-bootstrap/Container";
 import Header from "./Components/Header";
+import Home from "./Components/Home";
 
 function App() {
   return (
-    <div className="App">
+    <Container fluid>
       <Header />
-    </div>
+      <Home />
+    </Container>
   );
 }
 
