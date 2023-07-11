@@ -8,6 +8,7 @@ import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
 import { AiOutlineShoppingCart, AiFillDelete } from "react-icons/ai";
 import { CartState } from "../Context/Context";
 
@@ -43,25 +44,33 @@ const Header = () => {
         >
           <Dropdown.Item style={{ width: 500 }}>
             {cart.map((c) => (
-              <Card>
+              <Card className="my-2">
                 <Card.Body>
-                  <Row>
+                  <Row className="d-flex justify-content-center align-items-center">
                     <Col>
-                      <img src={c.image} alt={c.name} height={75} width={75} />
+                      <Image
+                        src={c.image}
+                        roundedCircle
+                        height={75}
+                        width={75}
+                      />
                     </Col>
                     <Col>
                       <div>{c.name}</div>
                       <div>{c.price}</div>
                     </Col>
-                    <Col>
-                      <AiFillDelete />
+                    <Col className="text-center">
+                      <AiFillDelete
+                        className="text-danger"
+                        style={{ fontSize: "30px" }}
+                      />
                     </Col>
                   </Row>
                 </Card.Body>
               </Card>
             ))}
             <Row>
-              <button className="btn btn-primary">Clear Cart</button>
+              <Button variant="primary">Clear Cart</Button>
             </Row>
           </Dropdown.Item>
         </DropdownButton>
