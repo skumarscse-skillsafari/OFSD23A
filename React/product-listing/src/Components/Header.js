@@ -11,26 +11,34 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import { AiOutlineShoppingCart, AiFillDelete } from "react-icons/ai";
 import { CartState } from "../Context/Context";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   //   console.log(CartState());
   const {
     state: { cart },
+    dispatch,
+    productsDispatch,
   } = CartState();
   return (
     <Navbar bg="success" className="px-5">
       <Container fluid>
-        <Navbar.Brand href="#" style={{ color: "white" }}>
+        <Navbar.Brand href="/" style={{ color: "white" }}>
           Products Listing
         </Navbar.Brand>
-        <Form className="d-flex">
+        <Form className="d-flex w-50">
           <Form.Control
             type="search"
             placeholder="Search"
             className="me-2"
             aria-label="Search"
+            onChange={(e) =>
+              productsDispatch({
+                type: "FILTER_BY_SEARCH",
+                payload: e.target.value,
+              })
+            }
           />
-          <Button variant="outline-success">Search</Button>
         </Form>
         <DropdownButton
           drop="start"
@@ -44,7 +52,7 @@ const Header = () => {
         >
           <Dropdown.Item style={{ width: 500 }}>
             {cart.map((c) => (
-              <Card className="my-2">
+              <Card className="my-2" key={c.id}>
                 <Card.Body>
                   <Row className="d-flex justify-content-center align-items-center">
                     <Col>
@@ -63,6 +71,12 @@ const Header = () => {
                       <AiFillDelete
                         className="text-danger"
                         style={{ fontSize: "30px" }}
+                        onClick={() =>
+                          dispatch({
+                            type: "REMOVE_FROM_CART",
+                            payload: c.id,
+                          })
+                        }
                       />
                     </Col>
                   </Row>
@@ -70,7 +84,9 @@ const Header = () => {
               </Card>
             ))}
             <Row>
-              <Button variant="primary">Clear Cart</Button>
+              <Link to="/cart" className="btn btn-primary">
+                Go to Cart
+              </Link>
             </Row>
           </Dropdown.Item>
         </DropdownButton>
