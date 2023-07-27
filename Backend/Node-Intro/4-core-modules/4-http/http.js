@@ -5,7 +5,7 @@ let server = http.createServer((req, res) => {
   if (req.url === "/") {
     res.end("<h1>Welcome to Node.js</h1>");
   } else if (req.url === "/about") {
-    res.end("<h1>Welcome to About page</h1>");
+    res.end({ message: "This is about page" });
   } else {
     res.end(`
         <h1>Something went wrong</h1>
