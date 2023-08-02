@@ -31,7 +31,7 @@ app.get("/api/products", (req, res) => {
 
 // productsDetails
 // http://localhost:5000/api/products-details
-app.get("/api/products", (req, res) => {
+app.get("/api/products-details", (req, res) => {
   res.status(200).json({ message: "success", data: products });
 });
 
@@ -39,7 +39,7 @@ app.get("/api/products", (req, res) => {
 // http://localhost:5000/api/products/:id
 // http://localhost:5000/api/products/:id/reviews/:rid
 app.get("/api/products/:id", (req, res) => {
-  console.log(req.params);
+  // console.log(req.params);
   const { id } = req.params;
   let singleProduct = products.find((product) => product.id === Number(id));
   // console.log(singleProduct);
@@ -47,6 +47,37 @@ app.get("/api/products/:id", (req, res) => {
     return res.status(400).json({ message: `No product with the id: ${id}` });
   }
   res.status(200).json(singleProduct);
+});
+
+// query
+// http://localhost:5000/api/filter-products?title="Laptops"&limit="3"
+app.get("/api/filter-products", (req, res) => {
+  // console.log(req.query);
+  let { title, limit } = req.query;
+  let filteredProducts = [...products];
+
+  let filterProducts = filteredProducts
+    .map((product) => {
+      return {
+        ...product,
+        title: product.title.toLowerCase(),
+      };
+    })
+    .filter((p) => p.title.includes(title.toLowerCase()));
+
+  // console.log(filterProducts);
+
+  if (filterProducts.length < 0) {
+    return res.status(200).json({ message: "success", data: [] });
+  } else {
+    let limitProduct = filterProducts.slice(0, Number(limit));
+    console.log(filterProducts);
+    if (!limitProduct) {
+      return res.status(200).json({ message: "success", data: filterProducts });
+    } else {
+      return res.status(200).json({ message: "success", data: limitProduct });
+    }
+  }
 });
 
 // users
