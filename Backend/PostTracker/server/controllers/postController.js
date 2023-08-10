@@ -38,8 +38,10 @@ export const updatePost = async (req, res) => {
     duration: duration,
     date: date,
   })
-    .then((updatedPost) =>
-      res.status(200).json({ success: true, updatedPost: updatedPost })
+    .then(() =>
+      res
+        .status(200)
+        .json({ success: true, message: "Post updated successfully" })
     )
     .catch((err) => res.status(400).json({ success: false, message: err }));
 };
