@@ -8,7 +8,7 @@ const Header = () => {
     <div>
       <Navbar expand="lg" className="bg-secondary">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand>
             <Link
               to="/"
               style={{ textDecoration: "none" }}
@@ -20,35 +20,29 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link>
-                <Link
-                  to="/"
-                  style={{ textDecoration: "none" }}
-                  className="text-light"
-                >
-                  Post List
-                </Link>
-              </Nav.Link>
+              <Link
+                to="/"
+                style={{ textDecoration: "none" }}
+                className="text-light"
+              >
+                Post List
+              </Link>
 
-              <Nav.Link>
-                <Link
-                  to="/post/create"
-                  style={{ textDecoration: "none" }}
-                  className="text-light"
-                >
-                  Create Post
-                </Link>
-              </Nav.Link>
+              <Link
+                to="/post/create"
+                style={{ textDecoration: "none" }}
+                className="text-light"
+              >
+                Create Post
+              </Link>
 
-              <Nav.Link>
-                <Link
-                  to="/user/create"
-                  style={{ textDecoration: "none" }}
-                  className="text-light"
-                >
-                  Create User
-                </Link>
-              </Nav.Link>
+              <Link
+                to="/user/create"
+                style={{ textDecoration: "none" }}
+                className="text-light"
+              >
+                Create User
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

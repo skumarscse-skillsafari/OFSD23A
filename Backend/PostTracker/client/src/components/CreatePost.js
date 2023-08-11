@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
+  const navigate = useNavigate();
   const [post, setPost] = useState({
     username: "",
     description: "",
@@ -14,7 +16,7 @@ const CreatePost = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/v1/users")
+      .get("https://glamorous-necklace-crab.cyclic.app/api/v1/users")
       .then((res) => {
         setPost((preVal) => {
           return {
@@ -48,8 +50,15 @@ const CreatePost = () => {
     };
 
     axios
-      .post("http://localhost:5000/api/v1/posts/create", newPost)
-      .then((res) => console.log(res.data))
+      .post(
+        "https://glamorous-necklace-crab.cyclic.app/api/v1/posts/create",
+        newPost
+      )
+      .then((res) => {
+        alert("Post created successfully");
+        navigate("/");
+        console.log(res.data);
+      })
       .catch((err) => console.log(err));
   };
 
@@ -70,7 +79,7 @@ const CreatePost = () => {
         <div className="mb-3">
           <label className="form-label">Username</label>
           <select
-            class="form-select"
+            className="form-select"
             aria-label="Default select example"
             value={post.username}
             name="username"
@@ -111,18 +120,25 @@ const CreatePost = () => {
         </div>
         <div className="mb-3">
           <label className="form-label">Date</label>
-          <br />
-          <DatePicker
-            className="form-control"
-            selected={post.date}
-            onChange={handleDate}
-          />
+          <div className="form-control">
+            <DatePicker
+              selected={post.date}
+              onChange={handleDate}
+              className="border-0"
+            />
+          </div>
         </div>
         <div className="d-grid gap-2">
-          <button className="btn btn-success" onClick={handleCreate}>
+          <button
+            className="btn btn-success"
+            type="submit"
+            onClick={handleCreate}
+          >
             Create
           </button>
-          <button className="btn btn-danger">Cancel</button>
+          <button type="reset" className="btn btn-danger">
+            Cancel
+          </button>
         </div>
       </form>
     </div>

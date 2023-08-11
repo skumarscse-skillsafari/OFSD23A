@@ -12,6 +12,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
+          <Route path="/" element={<PostList />} />
           <Route path="/post/create" element={<CreatePost />} />
           <Route path="/user/create" element={<CreateUser />} />
           <Route path="/post/edit/:id" element={<EditPost />} />
