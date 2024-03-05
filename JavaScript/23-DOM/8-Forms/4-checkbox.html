@@ -57,6 +57,7 @@
           let checkBtns = document.querySelectorAll(
             "[type='checkbox']:checked"
           );
+          console.log(checkBtns);
           let checkBtnArr = Array.from(checkBtns).map((c) => c.value);
           console.log(checkBtnArr);
           result.innerText =

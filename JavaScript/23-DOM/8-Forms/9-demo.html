@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Input Display</title>
+  </head>
+  <body>
+    <input type="text" id="textInput" />
+    <div id="display"></div>
+
+    <script>
+      // Get references to the input field and the display element
+      const textInput = document.getElementById("textInput");
+      const display = document.getElementById("display");
+
+      // Add an event listener to the input field to listen for changes
+      textInput.addEventListener("input", function () {
+        // Get the current value of the input field
+        const inputValue = textInput.value;
+
+        // Update the display element with the input value
+        display.textContent = inputValue;
+      });
+    </script>
+  </body>
+</html>
